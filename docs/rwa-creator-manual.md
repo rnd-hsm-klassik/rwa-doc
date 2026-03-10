@@ -61,4 +61,62 @@ Their attributes then can be edited together.
 An asset can be removed from a state with the Delete-key, if it is selected.
 Click+drag allows for editing the state radius.
 
+### Asset Attributes
+
+| Attribute                 | Description                                                                                                                                       |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Playback Mode             | auto types are not working yet, choose binaural or mono/stereo                                                                                    |
+| Fade-In Time              |                                                                                                                                                   |
+| Fade-Out Time             |                                                                                                                                                   |
+| Crossfade Time            | crossfade time if loop is activated                                                                                                               |
+| Gain                      |                                                                                                                                                   |
+| Channel Radius            | distance from center for multichannel binaural playback                                                                                           |
+| Rotate Frequency          | XXX                                                                                                                                               |
+| Moving Speed              | in m/s for moving assets, if attribute Move is activated                                                                                          |
+| Fixed Orientation         | assets keeps the same orientation relative to the player after entering the corresponding state, independent from the specified asset coordinates |
+| Fixed Elevation           |                                                                                                                                                   |
+| Fixed Distance            | asset stays at specified distance after entering the state, independent from the specified asset coordinates                                      |
+| Exclusive                 | XXX                                                                                                                                               |
+| Loop                      | asset will be looped with the specified crossfade time                                                                                            |
+| Stop Loop at End-Position | loop playback will stop after reaching the end position                                                                                           |
+| Raw sensors to pd         | XXX                                                                                                                                               |
+| GPS to pd                 | XXX                                                                                                                                               |
+| Play only once            | XXX                                                                                                                                               |
+| Rotate                    | XXX                                                                                                                                               |
+| Move                      | if activated, asset will move from specified start to specified end position. The coordinates can be edited in the Asset Map View.                |
+| Damping Function          | Whether asset volume is affected by distance; if so, either linear oder exponential                                                               |
+| Damping Factor            | factor in front of the Log Function, a value of 20 is natural damping in free-field (combined with damping trim of 1)                             |
+| Damping Trim              | factor before the clipping occurs, 1 is for free field                                                                                            |
+| Damping Min               | minimal damping factor                                                                                                                            |
+| Damping Max               | maximal damping factor                                                                                                                            |
+| Min Distance              | minimal possible distance to the corresponding asset.                                                                                             |
+
 ## Scene View
+
+Selected states can be removed with the Delete-Key. The selected state is visible in the *state attributes list*.
+
+| Attribute                     | Description                                                                                                     |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| State Type                    | only GPS and other are working so far.                                                                          |
+| Default Playback Mode         | default playback mode for all state assets.                                                                     |
+| Area Type                     | circle or rectangle or square.                                                                                  |
+| Next State                    | automatically enter the specified state as next state (use together with "Leave after assets finish" attribute) |
+| Next Scene                    | automatically enter the specified scene as next state (use together with "Leave after assets finish" attribute) |
+| Time Out                      | exit state after the specified time                                                                             |
+| Required States               | entry condition, state is only entered if the specified states have been visited already.                       |
+| State Radius                  |                                                                                                                 |
+| State Width                   |                                                                                                                 |
+| State Height                  |                                                                                                                 |
+| Assets follow state           | in editing mode, assets are moved together with the state                                                       |
+| Enter State only once         | state can only be entered once                                                                                  |
+| Exclusive for one Entity      | not in use yet                                                                                                  |
+| Enter Offset                  | offset in meters for entering a state radius; default is -6                                                     |
+| Exit Offset                   | offset in meters for leaving a state radius; default is 0                                                       |
+| Leave after assets finish     | exit state when assets are no longer active.                                                                    |
+| eave only after assets finish | entity stays in the state as long as assets are active, even if the player is outside the state radius.         |
+
+### Notes
+
+**Leave after assets finish**: "Leave after asset finish" is useful for "*nextState*" sequences: If the hero enters a state where the attribute "*nextState*" or "*nextScene*" is set, this state/scene will be entered automatically after all assets finished playing.
+
+**Leave only after assets finish**: If a state contains any looped assets, the attribute "*Leave only after assets finish*" should not be activated, otherwise the state is never exited because the assets never finish. Its purpose is rather to guarantee, that the hero gets all necessary information even if she already left the state radius. In this case, all assets will be played until the end and only afterwards the state will be left.
