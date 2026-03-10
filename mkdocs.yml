@@ -1,0 +1,19 @@
+site_name: RWA Documentation
+site_url: https://rnd-hsm-klassik.github.io/rwa-doc/
+theme:
+  name: material
+
+# nav:
+#   - Home: index.md
+#   - First File: first_file.md
+
+# markdown_extensions:
+#   - admonition
+#   - pymdownx.details
+#   - pymdownx.superfences
+#   - pymdownx.tabbed
+#   - pymdownx.emoji
+
+# (optional but nice)
+repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
+repo_name: rwa-doc
