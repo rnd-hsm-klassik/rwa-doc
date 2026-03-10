@@ -6,18 +6,17 @@ theme:
 markdown_extensions:
   - toc:
       permalink: true
+  - admonition
+  - footnotes
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.emoji
 
 # nav:
 #   - Home: index.md
 #   - First File: first_file.md
 
-# markdown_extensions:
-#   - admonition
-#   - pymdownx.details
-#   - pymdownx.superfences
-#   - pymdownx.tabbed
-#   - pymdownx.emoji
-
-# (optional but nice)
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc
