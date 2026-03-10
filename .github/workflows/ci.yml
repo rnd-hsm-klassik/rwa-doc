@@ -13,6 +13,8 @@ on:
 
 permissions:
   contents: write
+  id-token: write
+  pages: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -21,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  build:
     environment:
       name: github-pages
       url: https://rnd-hsm-klassik.github.io/rwa-doc/
@@ -36,12 +38,48 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: echo "cache_id=$(date --utc '+%V')" >> $GITHUB_ENV
-      - uses: actions/cache@v4
+      - name: Cache pip
+        uses: actions/cache@v4  # cache installed Python packages between workflow runs
         with:
-          key: mkdocs-material-${{ env.cache_id }}
-          path: ~/.cache
-          restore-keys: |
-            mkdocs-material-
-      - run: pip install mkdocs-material 
-      - run: mkdocs gh-deploy --force
+          path: ~/.cache/pip  # where pip keeps downloaded packages
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}  # cache key: OS + hash of requirements.txt (so cache refreshes if deps change)
+          restore-keys: | # fallback: reuse latest cache for this OS  # allows multiple fallback keys (one per line)
+            ${{ runner.os }}-pip-
+          # here we only use one fallback: "any pip cache for this OS"
+          # if we wanted more, we could add extra lines
+
+      - name: Install dependencies
+        # run these shell commands on the VM
+        # `pip install --upgrade pip` will upgrade pip itself
+        # `pip install mkdocs-material pymdown-extensions` installz MkDocs + theme + extensions
+        run: |
+          pip install --upgrade pip
+          pip install mkdocs-material pymdown-extensions
+
+      - name: Build site
+        # runs `mkdocs build` to turn your `docs/` into a static site in the `site/` folder.
+        # --strict makes the build fail on config errors or bad links (useful to catch mistakes early)
+        run: mkdocs build --strict
+
+      - name: Upload artifact
+        # Upload the built site as an artifact:
+        # Takes the ./site folder that MkDocs produced and packages it as a Pages artifact.
+        # This artifact is what the next job (“deploy”) will publish to GitHub Pages.
+        uses: actions/upload-pages-artifact@v3 # package the built site for Pages
+        with:
+          path: ./site # folder created by `mkdocs build`
+
+  deploy:
+    needs: build # wait for the build job to succeed
+    runs-on: ubuntu-latest # run on a clean Ubuntu runner
+    environment: # Ties this job to the special github-pages environment
+      name: github-pages  # required for Pages deployments
+      url: ${{ steps.deployment.outputs.page_url }} # show the deployed URL in the UI
+
+    steps:
+      - name: Deploy to GitHub Pages
+        # Picks up the Pages artifact from the previous job and publishes it to GitHub Pages.
+        # Uses the OIDC auth we enabled with `id-token: write`.
+        # No extra inputs needed—the upload action already named the artifact correctly.
+        id: deployment # lets us reference steps.deployment.outputs.page_url earlier to show the final URL in the UI
+        uses: actions/deploy-pages@v4
