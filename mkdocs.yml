@@ -3,6 +3,10 @@ site_url: https://rnd-hsm-klassik.github.io/rwa-doc/
 theme:
   name: material
 
+markdown_extensions:
+  - toc:
+    permalink: true
+
 # nav:
 #   - Home: index.md
 #   - First File: first_file.md
