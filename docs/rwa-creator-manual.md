@@ -46,10 +46,14 @@ needs internet connection
 
 ## State View
 
+![rwa-creator-state-view](./assets/rwa-creator-state-view.png)
+
+**Asset Attributes** (left), **Asset List** (center), **Asset Map View** (right)
+
 ### General Usage
 
 In the *Asset List*, assets can be added via drag & drop; so far only `.wav` and `.aif` files are working.
-After adding an asset, it appears instantly in the *Asset Map*, where it can be placed with the mouse.
+After adding an asset, it appears instantly in the *Asset Map View*, where it can be placed with the mouse.
 Clicking on an asset either in the list or the map selects the corresponding asset;
 its attributes are shown in the *Asset Attributes* list and can be edited there.
 Several assets can be selected by holding down the Command-key and clicking on the assets in the list.
