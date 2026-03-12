@@ -71,7 +71,8 @@ Click+drag allows for editing the state radius.
 | Crossfade Time            | crossfade time if loop is activated                                                                                                               |
 | Gain                      |                                                                                                                                                   |
 | Channel Radius            | distance from center for multichannel binaural playback                                                                                           |
-| Rotate Frequency          | XXX                                                                                                                                               |
+| Rotate Frequency          | Rotations per second                                                                                                                              |
+| Rotate Offset             | Angle offset in degrees                                                                                                                           |
 | Moving Speed              | in m/s for moving assets, if attribute Move is activated                                                                                          |
 | Fixed Orientation         | assets keeps the same orientation relative to the player after entering the corresponding state, independent from the specified asset coordinates |
 | Fixed Elevation           |                                                                                                                                                   |
@@ -80,15 +81,15 @@ Click+drag allows for editing the state radius.
 | Loop                      | asset will be looped with the specified crossfade time                                                                                            |
 | Stop Loop at End-Position | loop playback will stop after reaching the end position                                                                                           |
 | Raw sensors to pd         | XXX                                                                                                                                               |
-| GPS to pd                 | XXX                                                                                                                                               |
+| GPS to pd                 | Forward lat/lon to Pure Data (`$0-lat`, `$0-lon`)                                                                                                 |
 | Play only once            | XXX                                                                                                                                               |
-| Rotate                    | XXX                                                                                                                                               |
+| Rotate                    | Rotate the channels of a multi-channel binaural setup around the assets center                                                                    |
 | Move                      | if activated, asset will move from specified start to specified end position. The coordinates can be edited in the Asset Map View.                |
 | Damping Function          | Whether asset volume is affected by distance; if so, either linear oder exponential                                                               |
 | Damping Factor            | factor in front of the Log Function, a value of 20 is natural damping in free-field (combined with damping trim of 1)                             |
 | Damping Trim              | factor before the clipping occurs, 1 is for free field                                                                                            |
-| Damping Min               | minimal damping factor                                                                                                                            |
-| Damping Max               | maximal damping factor                                                                                                                            |
+| Damping Min               | lower limit of *Damping Factor*                                                                                                                   |
+| Damping Max               | upper limit of *Damping Factor*                                                                                                                   |
 | Min Distance              | minimal possible distance to the corresponding asset.                                                                                             |
 
 ### Understanding Damping Parameters
@@ -109,7 +110,7 @@ The "*Linear Damping Function*" is drawn from the inverse distance law ($a = 1/d
 This creates a predictable drop in volume as you move away, as perceived in open outdoor environments (i.e. *free-field conditions*).
 
 The "*Exponential Damping Function*" allows to alter the physics of how the sound spreads through the environment:
-Using the *Damping Factor* representing the propagation constant, you can create a more dramatic drop-off that mimics how sound behaves in real-world conditions with obstacles, reflections, and atmospheric effects.
+Using the *Damping Factor* representing a propagation constant ($a = P \cdot \log_{10} d$), you can create a more dramatic drop-off that mimics how sound behaves in real-world conditions with obstacles, reflections, and atmospheric effects.
 
 | Damping Factor | Spreading Type | Physical Environment                                | Loss per Double Distance |
 | -------------- | -------------- | --------------------------------------------------- | ------------------------ |
