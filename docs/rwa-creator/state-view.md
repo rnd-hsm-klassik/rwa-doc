@@ -12,9 +12,9 @@ In the *Asset List*, assets can be added via drag & drop; so far only `.wav` and
 After adding an asset, it appears instantly in the *Asset Map View*, where it can be placed with the mouse.
 Clicking on an asset either in the list or the map selects the corresponding asset;
 its attributes are shown in the *Asset Attributes* list and can be edited there.
-Several assets can be selected by holding down the Command-key and clicking on the assets in the list.
+Several assets can be selected by holding down the ++command++ key and clicking on the assets in the list.
 Their attributes then can be edited together.
-An asset can be removed from a state with the Delete-key, if it is selected.
+An asset can be removed from a state with the ++delete++ key, if it is selected.
 Click+drag allows for editing the state radius.
 
 ## Asset Attributes

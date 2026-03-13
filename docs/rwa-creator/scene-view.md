@@ -6,7 +6,7 @@
 **Scene View**: State Attributes (left), State List (right)
 ///
 
-Selected states can be removed with the Delete-Key. The selected state is visible in the *state attributes list*.
+Selected states can be removed with the ++delete++ key. The selected state is visible in the *State Attributes* list.
 
 | Attribute                     | Description                                                                                                     |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
