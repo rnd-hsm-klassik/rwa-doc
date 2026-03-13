@@ -33,7 +33,7 @@ Click+drag allows for editing the state radius.
 | Fixed Orientation         | assets keeps the same orientation relative to the player after entering the corresponding state, independent from the specified asset coordinates |
 | Fixed Elevation           |                                                                                                                                                   |
 | Fixed Distance            | asset stays at specified distance after entering the state, independent from the specified asset coordinates                                      |
-| Exclusive                 | XXX                                                                                                                                               |
+| Exclusive                 | (no use found in code)                                                                                                                            |
 | Loop                      | asset will be looped with the specified crossfade time                                                                                            |
 | Stop Loop at End-Position | loop playback will stop after reaching the end position                                                                                           |
 | Raw sensors to pd         | XXX                                                                                                                                               |
