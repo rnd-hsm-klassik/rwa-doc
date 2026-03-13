@@ -18,6 +18,9 @@ markdown_extensions:
   - pymdownx.blocks.caption
   - pymdownx.arithmatex
 
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
+
 # nav:
 #   - Home: index.md
 #   - First File: first_file.md
