@@ -1,5 +1,11 @@
 # Map View
 
+![map-view](./assets/rwa-creator-map-view.png)
+
+/// caption
+Map View
+///
+
 ## Tools
 
 - **Arrow**: double clicking in *Map View* creates a new *state*. Clicking on an existing *state* selects it; click and drag moves an existing *state*; click+drag on the map moves the map

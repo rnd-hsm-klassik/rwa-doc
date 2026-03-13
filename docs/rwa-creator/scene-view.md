@@ -1,5 +1,11 @@
 # Scene View
 
+![scene-view](./assets/rwa-creator-scene-view.png)
+
+/// caption
+**Scene View**: State Attributes (left), State List (right)
+///
+
 Selected states can be removed with the Delete-Key. The selected state is visible in the *state attributes list*.
 
 | Attribute                     | Description                                                                                                     |
