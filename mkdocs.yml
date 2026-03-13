@@ -23,9 +23,18 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
 
-# nav:
-#   - Home: index.md
-#   - First File: first_file.md
+nav:
+  - Home: index.md
+  - RWA Creator:
+    - rwa-creator/index.md
+    - Getting Started: rwa-creator/getting-started.md
+    - General Game Structure: rwa-creator/overview.md
+    - Map View: rwa-creator/map-view.md
+    - Game View: rwa-creator/game-view.md
+    - State View: rwa-creator/state-view.md
+    - Scene View: rwa-creator/scene-view.md
+    # - History View: rwa-creator/history-view.md
+    # - Log View: rwa-creator/log-view.md
 
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc

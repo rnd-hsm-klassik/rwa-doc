@@ -2,7 +2,7 @@
 
 ## RWA Creator
 
-[Manual](rwa-creator-manual.md)
+[Manual](./rwa-creator/index.md)
 
 RWA Creator, the [Desktop Application for Real World Audio (RWA)](https://github.com/funkerresch/rwacreator),
 is used to create interactive binaural sounwalks.
