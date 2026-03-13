@@ -1,6 +1,6 @@
 # State View
 
-![rwa-creator-state-view](../assets/rwa-creator-state-view.png)
+![rwa-creator-state-view](./assets/rwa-creator-state-view.png)
 
 /// caption
 **Asset Attributes** (left), **Asset List** (center), **Asset Map View** (right)
@@ -58,7 +58,7 @@ When you walk away from a sound source, it gets quieter - these parameters let y
 
 ### Damping Function: Linear vs. Exponential
 
-![damping-factor-20-linear](../assets/damping-factor-20-linear.png)
+![damping-factor-20-linear](./assets/damping-factor-20-linear.png)
 
 /// caption
 Amplitude scaling for *Linear Damping* or *Exponential Damping* with *Damping Factor* 20.
@@ -76,13 +76,13 @@ Using the *Damping Factor* representing a propagation constant ($a = P \cdot \lo
 | 20             | Spherical      | Open air, "Free Space" (same as "linear")           | -6 dB                    |
 | 30+            | Obstructed     | Dense forests, urban "canyons," high-friction media | -9 dB or more            |
 
-![damping-factor-10](../assets/damping-factor-10.png)
+![damping-factor-10](./assets/damping-factor-10.png)
 
 /// caption
 Amplitude scaling for *Damping Factor* 10.
 ///
 
-![damping-factor-30](../assets/damping-factor-30.png)
+![damping-factor-30](./assets/damping-factor-30.png)
 
 /// caption
 Amplitude scaling for *Damping Factor* 30.
