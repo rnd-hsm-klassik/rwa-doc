@@ -48,7 +48,9 @@ needs internet connection
 
 ![rwa-creator-state-view](./assets/rwa-creator-state-view.png)
 
+/// caption
 **Asset Attributes** (left), **Asset List** (center), **Asset Map View** (right)
+///
 
 ### General Usage
 
@@ -104,7 +106,9 @@ When you walk away from a sound source, it gets quieter - these parameters let y
 
 ![damping-factor-20-linear](./assets/damping-factor-20-linear.png)
 
+/// caption
 Amplitude scaling for *Linear Damping* or *Exponential Damping* with *Damping Factor* 20.
+///
 
 The "*Linear Damping Function*" is drawn from the inverse distance law ($a = 1/d$), where sound intensity decreases proportionally to the distance from the source.
 This creates a predictable drop in volume as you move away, as perceived in open outdoor environments (i.e. *free-field conditions*).
@@ -120,11 +124,15 @@ Using the *Damping Factor* representing a propagation constant ($a = P \cdot \lo
 
 ![damping-factor-10](./assets/damping-factor-10.png)
 
+/// caption
 Amplitude scaling for *Damping Factor* 10.
+///
 
 ![damping-factor-30](./assets/damping-factor-30.png)
 
+/// caption
 Amplitude scaling for *Damping Factor* 30.
+///
 
 **When to use which**
 
