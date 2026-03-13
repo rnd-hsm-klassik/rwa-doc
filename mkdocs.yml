@@ -13,6 +13,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.emoji
+  - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.blocks.caption
 
 # nav:
 #   - Home: index.md
