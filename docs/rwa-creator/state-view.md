@@ -46,7 +46,7 @@ Click+drag allows for editing the state radius.
 | Damping Trim              | factor before the clipping occurs, 1 is for free field                                                                                            |
 | Damping Min               | lower limit of *Damping Factor*                                                                                                                   |
 | Damping Max               | upper limit of *Damping Factor*                                                                                                                   |
-| Min Distance              | minimal possible distance to the corresponding asset.                                                                                             |
+| Min Distance              | minimal possible distance to the corresponding asset                                                                                              |
 
 ## Understanding Damping Parameters
 
@@ -96,6 +96,12 @@ Amplitude scaling for *Damping Factor* 30.
 
 #### Practical examples
 
-- **Linear**: A street musician in an open plaza, birds singing in a field, wind blowing across an open landscape, normal conversation that feels natural as you approach or leave.
+- **Linear**: A street musician in an open plaza, birds singing in a field, wind blowing across an open landscape, normal conversation that feels natural as you approach or leave. Or water: use linear damping and place several binaural stereo sources further in the distance, to achieve a natural blend of sounds.
 - **Exponential (5-10)**: A church bell that should be heard across the entire village, footsteps echoing in a subway tunnel, voices in a covered market, music in a large indoor space.
 - **Exponential (30-40)**: A whispered secret that only works when you're very close, rustling leaves in a thick forest, conversation in a crowded café, whispers in a library.
+
+## Minimum Distance Example
+
+- when using steep expontential damping curve, audio gets really loud at close distances. min distance will keep you at safe distance.
+- for quieter sounds that are limited to a smaller area
+- song/poem localiste close to an object, but without having to use an extra state
