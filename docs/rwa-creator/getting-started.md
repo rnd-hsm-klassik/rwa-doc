@@ -2,7 +2,7 @@
 
 ## Installation
 
-Download the [latest version](https://github.com/funkerresch/rwacreator/raw/refs/heads/main/rwabuild/rwacreator.dmg) of RWA Creator from the [git repository](https://github.com/funkerresch/rwacreator). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
+Download the [latest version](https://drive.switch.ch/remote.php/webdav/H.E.I.-Campus/shared/software/RWACreator/rwacreator.dmg) of RWA Creator from the [git repository](https://github.com/funkerresch/rwacreator). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
 
 Open the downloaded disk image and move the RWA Creator application (`rwacreator.app`) to your Applications folder. You can then launch the application from there.
 
@@ -20,4 +20,3 @@ SoundWalk/
 ```
 
 After creating a new project, you will see the main interface of RWA Creator, which consists of six views: [Map View](./map-view.md), [Game View](./game-view.md), [Scene View](./scene-view.md), [State View](./state-view.md), History View and Log Window. You can freely arrange these views by dragging and dropping them to your preferred layout, or having them float as separate windows.
-
