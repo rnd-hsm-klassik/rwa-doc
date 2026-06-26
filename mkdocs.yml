@@ -57,7 +57,7 @@ markdown_extensions:
               - rwa-creator/*
 
 extra_javascript:
-  - javascripts/mathjax.js
+  - js/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
 
 nav:
