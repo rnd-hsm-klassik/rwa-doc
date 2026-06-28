@@ -1,9 +1,10 @@
-name: Deploy docs using MkDocs and github-pages
+name: Deploy docs using Zensical and github-pages
 
 on:
   push:
     branches:
       - main
+      - zensical
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
@@ -54,12 +55,12 @@ jobs:
         # `pip install mkdocs-material pymdown-extensions` installz MkDocs + theme + extensions
         run: |
           pip install --upgrade pip
-          pip install mkdocs-material pymdown-extensions
+          pip install zensical
 
       - name: Build site
         # runs `mkdocs build` to turn your `docs/` into a static site in the `site/` folder.
         # --strict makes the build fail on config errors or bad links (useful to catch mistakes early)
-        run: mkdocs build --strict
+        run: zensical build --clean
 
       - name: Upload artifact
         # Upload the built site as an artifact:

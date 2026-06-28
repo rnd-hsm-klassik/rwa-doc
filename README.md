@@ -8,13 +8,13 @@ Install dependencies:
 python -m venv .venv
 source .venv/bin/activate
 pip install --upgrade pip
-pip install mkdocs-material pymdown-extensions
+pip install zensical
 ```
 
 Run the development server:
 
 ```bash
-mkdocs serve -o -w docs --livereload
+zensical serve
 ```
 
 ## Publishing

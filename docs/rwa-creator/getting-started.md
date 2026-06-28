@@ -19,4 +19,4 @@ SoundWalk/
 └── undo/
 ```
 
-After creating a new project, you will see the main interface of RWA Creator, which consists of six views: [Map View](./map-view.md), [Game View](./game-view.md), [Scene View](./scene-view.md), [State View](./state-view.md), History View and Log Window. You can freely arrange these views by dragging and dropping them to your preferred layout, or having them float as separate windows.
+After creating a new project, you will see the main interface of RWA Creator, which consists of six views: [Map View](./map-view.md), [Game View](./game-view.md), [Scene View](./scene-view.md), [State View](./state-view.md), History View and [Log View](./log-view.md). You can freely arrange these views by dragging and dropping them to your preferred layout, or having them float as separate windows.
