@@ -19,34 +19,36 @@ Click+drag allows for editing the state radius.
 
 ## Asset Attributes
 
-| Attribute                 | Description                                                                                                                                       |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Playback Mode             | auto types are not working yet, choose binaural or mono/stereo                                                                                    |
-| Fade-In Time              |                                                                                                                                                   |
-| Fade-Out Time             |                                                                                                                                                   |
-| Crossfade Time            | crossfade time if loop is activated                                                                                                               |
-| Gain                      |                                                                                                                                                   |
-| Channel Radius            | distance from center for multichannel binaural playback                                                                                           |
-| Rotate Frequency          | Rotations per second                                                                                                                              |
-| Rotate Offset             | Angle offset in degrees                                                                                                                           |
-| Moving Speed              | in m/s for moving assets, if attribute Move is activated                                                                                          |
-| Fixed Orientation         | assets keeps the same orientation relative to the player after entering the corresponding state, independent from the specified asset coordinates |
-| Fixed Elevation           |                                                                                                                                                   |
-| Fixed Distance            | asset stays at specified distance after entering the state, independent from the specified asset coordinates                                      |
-| Exclusive                 | (no use found in code)                                                                                                                            |
-| Loop                      | asset will be looped with the specified crossfade time                                                                                            |
-| Stop Loop at End-Position | loop playback will stop after reaching the end position                                                                                           |
-| Raw sensors to pd         | XXX                                                                                                                                               |
-| GPS to pd                 | Forward lat/lon to Pure Data (`$0-lat`, `$0-lon`)                                                                                                 |
-| Play only once            | XXX                                                                                                                                               |
-| Rotate                    | Rotate the channels of a multi-channel binaural setup around the assets center                                                                    |
-| Move                      | if activated, asset will move from specified start to specified end position. The coordinates can be edited in the Asset Map View.                |
-| Damping Function          | Whether asset volume is affected by distance; if so, either linear oder exponential                                                               |
-| Damping Factor            | factor in front of the Log Function, a value of 20 is natural damping in free-field (combined with damping trim of 1)                             |
-| Damping Trim              | factor before the clipping occurs, 1 is for free field                                                                                            |
-| Damping Min               | lower limit of *Damping Factor*                                                                                                                   |
-| Damping Max               | upper limit of *Damping Factor*                                                                                                                   |
-| Min Distance              | minimal possible distance to the corresponding asset                                                                                              |
+| Attribute                 | Default | Unit | Description                                                                                                                                       |
+| ------------------------- | ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Playback Mode             | -1      |      | auto types are not working yet, choose binaural or mono/stereo                                                                                    |
+| Fade-In Time              | 50      | ms   |                                                                                                                                                   |
+| Fade-Out Time             | 50      | ms   |                                                                                                                                                   |
+| Crossfade Time            | 2000    | ms   | crossfade time if loop is activated                                                                                                               |
+| Gain                      | 1.0     |      |                                                                                                                                                   |
+| Elevation                 | 0.0     | m    | z-offset                                                                                                                                          |
+| Channel Radius            | 20.0    | m    | distance from center for multichannel binaural playback                                                                                           |
+| Rotate Frequency          | 0.0     | Hz   | Rotations per second                                                                                                                              |
+| Rotate Offset             | 0.0     | deg  | Angle offset in degrees                                                                                                                           |
+| Moving Speed              | 20.0    | m/s  | in m/s for moving assets, if attribute Move is activated                                                                                          |
+| Fixed Orientation         | -1.0    | deg  | assets keeps the same orientation relative to the player after entering the corresponding state, independent from the specified asset coordinates |
+| Fixed Elevation           | -1.0    | m    |                                                                                                                                                   |
+| Fixed Distance            | -1.0    | m    | asset stays at specified distance after entering the state, independent from the specified asset coordinates                                      |
+| Exclusive                 | false   |      | (no use found in code)                                                                                                                            |
+| Loop                      | false   |      | asset will be looped with the specified crossfade time                                                                                            |
+| Stop Loop at End-Position | false   |      | loop playback will stop after reaching the end position                                                                                           |
+| Raw sensors to pd         | false   |      | XXX                                                                                                                                               |
+| GPS to pd                 | false   |      | Forward lat/lon to Pure Data (`$0-lat`, `$0-lon`)                                                                                                 |
+| Play only once            | false   |      | XXX                                                                                                                                               |
+| Rotate                    | false   |      | Rotate the channels of a multi-channel binaural setup around the assets center                                                                    |
+| Move                      | false   |      | if activated, asset will move from specified start to specified end position. The coordinates can be edited in the Asset Map View.                |
+| Damping Function          | 1       |      | Whether asset volume is affected by distance; if so, either linear (2) or exponential (1), or fixed (0)                                           |
+| Damping Factor            | 30.0    |      | factor in front of the Log Function, a value of 20 is natural damping in free-field (combined with damping trim of 1)                             |
+| Damping Trim              | 2.0     |      | factor before the clipping occurs, 1 is for free field                                                                                            |
+| Damping Min               | 0.0     |      | lower limit of *Damping Factor*                                                                                                                   |
+| Damping Max               | 1.0     |      | upper limit of *Damping Factor*                                                                                                                   |
+| Min Distance              | 0.0     |      | minimal possible distance to the corresponding asset                                                                                              |
+| Smooth Distance           | 10.0    | ms   |                                                                                                                                                   |
 
 ## Understanding Damping Parameters
 
