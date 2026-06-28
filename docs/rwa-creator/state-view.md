@@ -56,13 +56,83 @@ That makes sense for certain types of sources, like environmental ambience or ma
 Damping on the other hand allows you to simulate how sound behaves in the real world, where it gets quieter as you move away from the source.
 When you walk away from a sound source, it gets quieter - these parameters let you control exactly how that happens in the virtual environment.
 
+### Damping Explorer
+
+<div id="damping-explorer" class="damping-explorer">
+
+  <div class="damping-controls">
+
+    <div class="damping-field">
+      <div class="header">
+        <label for="damping-factor"><span>Damping Factor</span></label>
+        <span id="factor-val" class="value">20</span>
+      </div>
+      <input type="range" id="damping-factor" min="1" max="60" step="1" value="20" class="input">
+    </div>
+
+    <div class="damping-field">
+      <div class="header">
+        <label for="damping-trim"><span>Damping Trim</span></label>
+        <span id="trim-val" class="value">2.00</span>
+      </div>
+      <input type="range" id="damping-trim" min="0.1" max="3.0" step="0.05" value="2.0" class="input">
+    </div>
+
+    <div class="damping-field">
+      <div class="header">
+        <label for="damping-min"><span>Damping Min</span></label>
+        <span id="damp-min-val" class="value">0.00</span>
+      </div>
+      <input type="range" id="damping-min" min="0" max="0.95" step="0.01" value="0" class="input">
+    </div>
+
+    <div class="damping-field">
+      <div class="header">
+        <label for="damping-max"><span>Damping Max</span></label>
+        <span id="damp-max-val" class="value">1.00</span>
+      </div>
+      <input type="range" id="damping-max" min="0.05" max="2.0" step="0.01" value="1.0" class="input">
+    </div>
+
+    <div class="damping-field damping-field-select">
+
+      <div class="damping-field-selecttion">
+        <span class="damping-section-title">Y Axis</span>
+        <label class="damping-choice" for="y-mode">
+          <select id="y-mode" name="y-mode">
+            <option value="amplitude">Amplitude</option>
+            <option value="db" selected>dB</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="damping-field-selecttion">
+        <span class="damping-section-title">Damping Function</span>
+        <label class="damping-choice" for="damping-fn">
+          <select id="damping-fn" name="damping-fn">
+            <option value="none">None</option>
+            <option value="linear">Linear</option>
+            <option value="exponential" selected>Exponential</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="damping-field">
+      <div class="header">
+        <label for="min-distance"><span>Min Distance</span></label>
+        <span id="min-dist-val" class="value">1.0</span>
+      </div>
+      <input type="range" id="min-distance" min="0" max="20" step="0.1" value="1" class="input">
+    </div>
+  </div>
+
+  <div id="damping-graph" class="damping-graph"></div>
+
+</div>
+
+
 ### Damping Function: Linear vs. Exponential
-
-![damping-factor-20-linear](./assets/damping-factor-20-linear.png)
-
-/// caption
-Amplitude scaling for *Linear Damping* or *Exponential Damping* with *Damping Factor* 20.
-///
 
 The "*Linear Damping Function*" is drawn from the inverse distance law ($a = 1/d$), where sound intensity decreases proportionally to the distance from the source.
 This creates a predictable drop in volume as you move away, as perceived in open outdoor environments (i.e. *free-field conditions*).
@@ -76,17 +146,6 @@ Using the *Damping Factor* representing a propagation constant ($a = P \cdot \lo
 | 20             | Spherical      | Open air, "Free Space" (same as "linear")           | -6 dB                    |
 | 30+            | Obstructed     | Dense forests, urban "canyons," high-friction media | -9 dB or more            |
 
-![damping-factor-10](./assets/damping-factor-10.png)
-
-/// caption
-Amplitude scaling for *Damping Factor* 10.
-///
-
-![damping-factor-30](./assets/damping-factor-30.png)
-
-/// caption
-Amplitude scaling for *Damping Factor* 30.
-///
 
 #### When to use which
 
@@ -102,6 +161,8 @@ Amplitude scaling for *Damping Factor* 30.
 
 ## Minimum Distance Example
 
-- when using steep expontential damping curve, audio gets really loud at close distances. min distance will keep you at safe distance.
+Minimum distance is set to -1 by default, which means that the damping function will be applied all the way to the source. If you want to ensure that the sound does not get too loud when you are very close to it, you can set a minimum distance. This will keep the volume at a safe level even when you are near the source.
+
+- when using steep exponential damping curve, audio gets really loud at close distances. min distance will keep you at safe distance.
 - for quieter sounds that are limited to a smaller area
-- song/poem localiste close to an object, but without having to use an extra state
+- song/poem localised close to an object, but without having to use an extra state

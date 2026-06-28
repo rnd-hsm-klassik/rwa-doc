@@ -71,6 +71,12 @@ markdown_extensions:
 extra_javascript:
   - js/mathjax.js
   - https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js
+  - https://unpkg.com/d3@7/dist/d3.min.js
+  - https://unpkg.com/function-plot/dist/function-plot.js
+  - js/interactive-graphs.js
+
+extra_css:
+  - styles/plots.css
 
 nav:
   - Home: index.md

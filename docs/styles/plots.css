@@ -1,0 +1,64 @@
+.damping-explorer {
+	margin: 1.5rem 0;
+	padding: 1rem 1rem 0.5rem;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	background: #f9f9f9;
+}
+
+.damping-explorer h3 {
+  margin: 0 0 0.6rem 0;
+}
+
+.damping-controls {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.6rem 2rem;
+	margin-bottom: 1rem;
+	font-size: 0.7rem;
+	font-family: inherit;
+}
+
+.damping-row,
+.damping-field .header,
+.damping-choice {
+	display: flex;
+	align-items: center;
+}
+
+.damping-field-select {
+	gap: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.6rem;
+}
+
+.damping-section-title {
+	min-width: 130px;
+}
+
+.damping-choice {
+	cursor: pointer;
+	gap: 0.3rem;
+	max-width: 50%;
+  width: 50%;
+}
+
+.damping-field .header {
+	justify-content: space-between;
+	margin-bottom: 2px;
+}
+
+.damping-field .value {
+	font-variant-numeric: tabular-nums;
+	min-width: 2.5em;
+	text-align: right;
+}
+
+.damping-field .input {
+	width: 100%;
+}
+
+.damping-graph {
+	width: 100%;
+}
