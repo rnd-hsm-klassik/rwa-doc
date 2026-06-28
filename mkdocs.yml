@@ -3,8 +3,20 @@ site_url: https://rnd-hsm-klassik.github.io/rwa-doc/
 theme:
   name: material
   palette:
-    primary: light-green
-    accent: orange
+    - media: "(prefers-color-scheme: light)"
+      primary: light-green
+      accent: orange
+      toggle:
+        icon: lucide/sun
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light-green
+      accent: orange
+      toggle:
+        icon: lucide/moon
+        name: Switch to light mode
+
   features:
     # - content.action.edit
     # - content.action.view
