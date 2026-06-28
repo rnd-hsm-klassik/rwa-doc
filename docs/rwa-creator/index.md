@@ -12,3 +12,5 @@ This manual provides a comprehensive guide to using the RWA Creator application,
 - [Game View](./game-view.md)
 - [Scene View](./scene-view.md)
 - [State View](./state-view.md)
+<!-- - [History View](./history-view.md) -->
+- [Log View](./log-view.md)
