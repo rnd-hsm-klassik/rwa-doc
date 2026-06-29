@@ -14,10 +14,10 @@ This view is useful for debugging and understanding what is happening in RWA Cre
 
 ### Filters
 
-- **Lat Lon** toggle: Shows or hides the coordinates (latitude and longitude) of the location clicked on the map.
-- **LibPd** toggle: Shows or hides messages of dynamic Pure Data patches.
-- **Simulator** toggle: Shows or hides the log of the simulator. This includes the incoming BLE head tracking data.
-- **Other** toggle: Shows or hides the log of the other components of RWA Creator, such as the map view, game view, scene view, and state view.
+- **Coords** toggle: Coordinates (latitude and longitude, [WGS-84](https://en.wikipedia.org/wiki/World_Geodetic_System)) of locations pointed at on the map.
+- **LibPd** toggle: Messages of *dynamic Pure Data* patches.
+- **Simulator** toggle: Log messages of the simulator.
+- **Other** toggle: Log messages of other components of RWA Creator, such as headtracker-data, the map view, game view, scene view, and state view.
 - **Log Level** dropdown: Filters the log messages based on their severity level. The available levels are:
     - Debug: Shows all log messages, including detailed debugging information.
     - Info: Relevant information about running scenes, etc.
