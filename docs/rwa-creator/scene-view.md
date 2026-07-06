@@ -6,7 +6,7 @@
 **Scene View**: State Attributes (left), State List (right)
 ///
 
-Selected states can be removed with the ++delete++ key. The selected state is visible in the *State Attributes* list.
+The *State List* shows all States of the selected Scene. Selected States can be removed with the ++delete++ key. The *State Attributes* show the attributes of the State selected in the *State List*. The Assets belonging to the selected State are shown in the *Asset List* in the [*State View*](state-view.md).
 
 | Attribute                     | Description                                                                                                     |
 | ----------------------------- | --------------------------------------------------------------------------------------------------------------- |
