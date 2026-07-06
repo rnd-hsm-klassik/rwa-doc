@@ -17,6 +17,22 @@ Their attributes then can be edited together.
 An asset can be removed from a state with the ++delete++ key, if it is selected.
 Click+drag allows for editing the state radius.
 
+## Map legend
+
+:rwa-state: Center of a state
+
+:rwa-stateselected: Center of selected state
+
+:rwa-audiosource: Asset (also center of rotation)
+
+:rwa-audiosourceselected: Selected asset
+
+:rwa-audiochannelsource: Channel source if asset has more than one channel
+
+:rwa-audiosourcestartpoint: Starting point of moving asset
+
+:rwa-audiosourcestartpoint1: Moving asset position
+
 ## Asset Attributes
 
 | Attribute                 | Default | Unit | Description                                                                                                                                       |
