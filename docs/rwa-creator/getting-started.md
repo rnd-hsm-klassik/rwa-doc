@@ -2,9 +2,9 @@
 
 ## Installation
 
-Download the [latest version](https://drive.switch.ch/index.php/s/JagyL7xWDo6WrVS) of RWA Creator from the [git repository](https://github.com/funkerresch/rwacreator). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
+Download the [latest version](https://drive.switch.ch/index.php/s/bT8cjFPVWiHbCZA/download) of RWA Creator (v1.2.3, 2026-07-06). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
 
-Open the downloaded disk image and move the RWA Creator application (`rwacreator.app`) to your Applications folder. You can then launch the application from there.
+Open the downloaded disk image, open it and move the `RWA Creator.app` to your Applications folder. You can then launch the application from there.
 
 ## First Steps
 
