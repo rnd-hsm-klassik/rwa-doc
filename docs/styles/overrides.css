@@ -1,0 +1,19 @@
+/* body .md-typeset li .twemoji svg path { */
+.md-typeset .twemoji:has(svg[fill="#2854C5"]) {
+    color: #2854C5 !important;
+}
+.md-typeset .twemoji:has(svg[fill="#F19E39"]) {
+    color: #F19E39 !important;
+}
+.md-typeset .twemoji:has(svg[fill="#8C1AF6"]) {
+    color: #8C1AF6 !important;
+}
+.md-typeset .twemoji:has(svg[fill="#D16D6A"]) {
+    color: #D16D6A !important;
+}
+.md-typeset .twemoji:has(svg[fill="#434343"]) {
+    color: #434343 !important;
+}
+.md-typeset .twemoji:has(svg[fill="#9DC384"]) {
+    color: #9DC384 !important;
+}

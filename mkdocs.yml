@@ -2,6 +2,7 @@ site_name: RWA Documentation
 site_url: https://rnd-hsm-klassik.github.io/rwa-doc/
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       primary: light-green
@@ -56,7 +57,12 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed
-  - pymdownx.emoji
+  - pymdownx.emoji:
+      emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+      emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
+      options:
+        custom_icons:
+          - overrides/.icons
   - pymdownx.mark
   - pymdownx.keys
   - pymdownx.blocks.caption
@@ -77,6 +83,7 @@ extra_javascript:
 
 extra_css:
   - styles/plots.css
+  - styles/overrides.css
 
 nav:
   - Home: index.md
