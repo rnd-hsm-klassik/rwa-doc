@@ -97,6 +97,11 @@ nav:
     - State View: rwa-creator/state-view.md
     # - History View: rwa-creator/history-view.md
     - Log View: rwa-creator/log-view.md
+  - RWA Player:
+    - rwa-player/index.md
+    - Getting Started: rwa-player/getting-started.md
+    - Overview: rwa-player/overview.md
+    - Diagnostics: rwa-player/diagnostics.md
 
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc
