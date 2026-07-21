@@ -32,10 +32,13 @@
 
 ### :rwa-headtrackerStepButton: Send Footstep
 
-### Hero Follows Selection
-
+### ![hero4](./assets/heroFollowsSceneAndStateButton.png) Hero Follows Selection
 <!-- TODO: this is missing an SVG Icon -->
-![hero4](./assets/heroFollowsSceneAndStateButton.png)
+
+When active, the hero jumps to locations selected through *Select Scene* or *Select Scene* menues. This is useful for debugging the game in simulation mode, as you can place the hero into state/scene without having to move through other states/scenes i.e. dragging the hero around.
+
+!!! tip "Only applies to menu-selection"
+    "Hero Follows Selection" only applies to the *Map View* **menu selection**, not for selection by clicking on list entries in *Game*- or *State View*!
 
 ### Toggle remove assets on delete
 
