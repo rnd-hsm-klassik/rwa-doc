@@ -102,6 +102,9 @@ nav:
     - rwa-player/index.md
     - Getting Started: rwa-player/getting-started.md
     - Overview: rwa-player/overview.md
+    - Games View: rwa-player/games-view.md
+    - Control Data View: rwa-player/control-data-view.md
+    - Map View: rwa-player/map-view.md
     - Diagnostics View: rwa-player/diagnostics-view.md
   - FAQ:
     - faq.md

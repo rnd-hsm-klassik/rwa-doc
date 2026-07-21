@@ -8,8 +8,7 @@ This manual provides a comprehensive guide to using the iOS RWA Player applicati
 
 - [Getting Started](./getting-started.md)
 - [Overview](./overview.md)
-- [Control Data](./control-data.md)
-- [Game View](./game-view.md)
-- [Scene View](./scene-view.md)
-- [State View](./state-view.md)
-- [Diagnostics](./diagnostics.md)
+- [Games View](./games-view.md)
+- [Control Data View](./control-data-view.md)
+- [Map View](./map-view.md)
+- [Diagnostics-View](./diagnostics-view.md)
