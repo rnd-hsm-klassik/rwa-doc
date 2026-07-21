@@ -50,9 +50,9 @@ When active, the hero jumps to locations selected through *Select Scene* or *Sel
 
 ### :rwa-findlocation: Location Lookup
 
-Open dialog to lookup map locations. Suggestions and coordinates are provided by an online service (Open Street Maps nominatim server or Swisstopo geoservice).
+Open dialog to lookup map locations. Suggestions and coordinates are provided by an online service (Open Street Maps nominatim server or Swisstopo geoservice)[^geoservice-lookup].
 
-!!! important "Rate Limits, Changes for H.E.I. Campus"
+[^geoservice-lookup]: **Rate Limits, Changes for H.E.I. Campus**:
     The documentation for the [OSM Nominatim Service](https://operations.osmfoundation.org/policies/nominatim/)
     that provides the location lookup, describes its use for auto-complete search as "*unacceptable use*".
     The requirements further state: "*No heavy uses (an absolute maximum of 1 request per second)*".
