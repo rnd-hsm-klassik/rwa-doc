@@ -51,6 +51,7 @@ markdown_extensions:
   - toc:
       permalink: true
   - admonition
+  - attr_list
   - footnotes
   - tables
   - md_in_html
@@ -101,7 +102,7 @@ nav:
     - rwa-player/index.md
     - Getting Started: rwa-player/getting-started.md
     - Overview: rwa-player/overview.md
-    - Diagnostics: rwa-player/diagnostics.md
+    - Diagnostics View: rwa-player/diagnostics-view.md
   - FAQ:
     - faq.md
 
