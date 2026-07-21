@@ -102,6 +102,8 @@ nav:
     - Getting Started: rwa-player/getting-started.md
     - Overview: rwa-player/overview.md
     - Diagnostics: rwa-player/diagnostics.md
+  - FAQ:
+    - faq.md
 
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc
