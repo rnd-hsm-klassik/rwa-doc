@@ -74,6 +74,8 @@ markdown_extensions:
         - targets:
             include:
               - rwa-creator/*
+              - rwa-player/*
+              - faq.md
 
 extra_javascript:
   - js/mathjax.js
