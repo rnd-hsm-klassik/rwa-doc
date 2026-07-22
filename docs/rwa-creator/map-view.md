@@ -3,7 +3,7 @@
 ![map-view](./assets/rwa-creator-map-view.png)
 
 /// caption
-**Map View** is the main view of the RWA Creator. It allows for creating and editing *scenes* and *states*.
+**Map View** is the main view of the RWA Creator. It allows for creating and editing **scenes** and **states**.
 ///
 
 ## Toolbar
