@@ -20,4 +20,4 @@ zensical serve
 ## Publishing
 
 The main branch is built and deployed by [GitHub Actions](./.github/workflows/ci.yml),
-publishing the documentation to GitHub Pages, which can be accessed at [https://rwa-doc.github.io/rwa-doc](https://rnd-hsm-klassik.github.io/rwa-doc/).
+publishing the documentation to GitHub Pages, which can be accessed at <https://rnd-hsm-klassik.github.io/rwa-doc/>.
