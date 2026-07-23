@@ -12,4 +12,4 @@ This view provides **undo/redo** functionality. Snapshots (undo/redo steps), are
     The snapshots themselves are versions of the project files, stored in the `undo` folder of the project. When copying the project to an iPhone, make sure to ***not*** include this folder, as every snapshot will show up as an individual game in the [RWA Player]. When exporting the game, this undo folder will be automatically removed (see [FAQ: How to copy a game to the iPhone]).
 
 [RWA Player]: ../rwa-player/games-view.md
-[FAQ: How to copy a game to the iPhone]: ../faq.md#how-to-copy-a-game-to-the-iphone
+[Transferring Projects]: exporting-rwa-projects.md

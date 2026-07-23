@@ -18,38 +18,41 @@ project and transferring it by cable, both devices talk to each other over the l
 
 ### Steps
 
-1. In *RWA Creator*, activate :rwa-syncwithclients: *Toggle Fileserver* in the [Map View](./map-view.md#toggle-fileserver)
+1. In *RWA Creator*, toggle :rwa-syncwithclients: *Activate Sharing Server* in the [Map View](./map-view.md#toggle-sharing-server)
    toolbar. The server now serves the exported projects to the local network.
-2. Navigate to *File > Export to Sharing Server*. This bundles your project into a `.zip` file and stores it in
+2. Navigate to *File > Send Project to Sharing Server...*. This bundles your project into a `.zip` file and stores it in
    the folder specified as *Sharing Server Path* in *File > File Path Preferences*.
-   ![File Path Preferences Window](./assets/export-file-path.png)
+   ![File Path Preferences Window](./assets/file-path-preferences.png)
 3. On the iPhone, open the *Settings* tab of *RWA Player* and enter the **IP address** of the laptop running
    *RWA Creator*.
 4. Switch to the [Games View](../rwa-player/games-view.md) and tap **Fetch Games**. All games offered by the
-   Sharing Server are transferred to the phone and appear in the list.
+   *Sharing Server* are transferred to the phone and appear in the list.
 
 !!! warning "Fetching replaces all games on the phone"
     **All games already on the phone are deleted before the new ones are loaded.** Whatever the Sharing Server
     offers at that moment is what you end up with on the device.
 
 !!! tip "Keep the server folder tidy"
-    Every export adds another `.zip` file to the *Export Games Path* folder, and every one of them is transferred
+    Every export adds another `.zip` file to the *Sharing Server Path*, and every one of them is transferred
     on each fetch. Clean out projects you no longer need, otherwise transfers become unnecessarily slow.
 
-## Manually transfer via USB
+## Transfer via USB
 
-On the main manu, navigate *File > Export for manual transfer* (to be renamed).
+1. On the main manu, navigate *File > Export Project for transfer to RWA Player...*.
+   This will export your project to the *Project Export Path* specified in *File > File Path Preferences*.
+   Your saved project is a folder containing the `.rwa` project file as well as its corresponding *assets*
+   folder. This folder and its contents are the only items that you will have
+   to copy to *RWA Player* in order to experience your RWA project as a GPS-based soundwalk.
+   ![Saved Exported Files](./assets/export-saved-files.png)
 
-![Export for XCode Client Project](./assets/export-tool-bar.png){width=66.66%}
+2. Connect the iPhone to your laptop, it will show up in the Finder-windows under the *Locations* section.
+   In the *Files* tab, you see the storage-folders of all apps supporting file-transfer, including the **RWA Player**.
+   Drag the freshly exported project folder onto the *RWA Player* entry to copy your game to the iPhone.
+   ![iPhone App Storage](../assets/iphone-app-storage.png)
 
-Your project will be saved to the *Export Games Path* path specified in *File > File Path Preferences*.
+3. Once the transfer is complete, disconnect the device and restart the *RWA Player* app.
 
-![File Path Preferences Window](./assets/export-file-path.png)
+!!! warning "Beware of the *undo* folder"
+    When exporting you game, make sure to choose the right export option! If you copy your project folder including its *undo* folder, each undo state will show up as a game in the *RWA Player* app. This is most certainly not what you want. A correctly exported project folder contains only the `<project-name>.rwa` file and the `assets` folder with your audio/Pd assets.
 
-Your saved project is a folder containing the .rwa project as well as its corresponding *assets* folder.
-
-![Saved Exported Files](./assets/export-saved-files.png)
-
-This folder and its contents are the only items that you will have to copy to *RWA Player* in order to experience your RWA project as a GPS-based soundwalk. [Copy this folder to your iPhone](../faq.md#how-to-copy-a-game-to-the-iphone)
-
-In our section about [RWA Player](../rwa-player), you will find all the necessary information to navigate the *RWA player* mobile app and its integration with the *RWA Creator* software.
+In our section about [RWA Player](../rwa-player), you will find all the necessary information to navigate the *RWA Player* mobile app and its integration with the *RWA Creator* software.

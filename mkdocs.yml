@@ -100,12 +100,11 @@ nav:
     - State View: rwa-creator/state-view.md
     - History View: rwa-creator/history-view.md
     - Log View: rwa-creator/log-view.md
-    - Exporting RWA Projects: rwa-creator/exporting-rwa-projects.md
+    - Transferring RWA Projects: rwa-creator/exporting-rwa-projects.md
   - RWA Player:
     - rwa-player/index.md
     - Getting Started: rwa-player/getting-started.md
     - Overview: rwa-player/overview.md
-    - Importing RWA Projects: rwa-player/import-rwa-projects.md
     - Games View: rwa-player/games-view.md
     - Control Data View: rwa-player/control-data-view.md
     - Map View: rwa-player/map-view.md

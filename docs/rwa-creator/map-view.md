@@ -46,7 +46,11 @@ When active, the hero jumps to locations selected through *Select Scene* or *Sel
 
 :rwa-donttrashassets: **Don't Trash**: Deleting assets in the list leaves the files in the asset-folder.
 
-### :rwa-syncwithclients: Toggle Fileserver
+### :rwa-syncwithclients: Toggle Sharing Server
+
+When active, RWA Creator serves the exported projects to the local network, for RWA Clients to download them (see [transfer projects over WiFi]).
+
+[transfer projects over WiFi]: ./exporting-rwa-projects.md#transfer-projects-over-wifi
 
 ### :rwa-findlocation: Location Lookup
 
