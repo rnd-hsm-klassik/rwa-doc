@@ -50,7 +50,7 @@ When active, the hero jumps to locations selected through *Select Scene* or *Sel
 
 When active, RWA Creator serves the exported projects to the local network, for RWA Clients to download them (see [transfer projects over WiFi]).
 
-[transfer projects over WiFi]: ./exporting-rwa-projects.md#transfer-projects-over-wifi
+[transfer projects over WiFi]: ../creating-soundwalks/transferring-projects.md#transfer-projects-over-wifi
 
 ### :rwa-findlocation: Location Lookup
 

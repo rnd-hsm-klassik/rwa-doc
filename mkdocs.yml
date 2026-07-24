@@ -75,6 +75,7 @@ markdown_extensions:
             include:
               - rwa-creator/*
               - rwa-player/*
+              - creating-soundwalks/*
               - faq.md
 
 extra_javascript:
@@ -100,7 +101,6 @@ nav:
     - State View: rwa-creator/state-view.md
     - History View: rwa-creator/history-view.md
     - Log View: rwa-creator/log-view.md
-    - Transferring RWA Projects: rwa-creator/exporting-rwa-projects.md
   - RWA Player:
     - rwa-player/index.md
     - Getting Started: rwa-player/getting-started.md
@@ -109,6 +109,12 @@ nav:
     - Control Data View: rwa-player/control-data-view.md
     - Map View: rwa-player/map-view.md
     - Diagnostics View: rwa-player/diagnostics-view.md
+  - Creating Soundwalks:
+    - creating-soundwalks/index.md
+    - Transferring Projects: creating-soundwalks/transferring-projects.md
+    - Location Data & Field Work:
+      - Simulating Location on the Phone: creating-soundwalks/simulating-location-on-the-phone.md
+      - Live GPS in RWA Creator: creating-soundwalks/live-gps-in-rwa-creator.md
   - FAQ:
     - faq.md
 

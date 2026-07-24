@@ -18,7 +18,7 @@ project and transferring it by cable, both devices talk to each other over the l
 
 ### Steps
 
-1. In *RWA Creator*, toggle :rwa-syncwithclients: *Activate Sharing Server* in the [Map View](./map-view.md#toggle-sharing-server)
+1. In *RWA Creator*, toggle :rwa-syncwithclients: *Activate Sharing Server* in the [Map View](../rwa-creator/map-view.md#toggle-sharing-server)
    toolbar. The server now serves the exported projects to the local network.
 2. Navigate to *File > Send Project to Sharing Server...*. This bundles your project into a `.zip` file and stores it in
    the folder specified as *Sharing Server Path* in *File > File Path Preferences*.
@@ -56,3 +56,5 @@ project and transferring it by cable, both devices talk to each other over the l
     When exporting you game, make sure to choose the right export option! If you copy your project folder including its *undo* folder, each undo state will show up as a game in the *RWA Player* app. This is most certainly not what you want. A correctly exported project folder contains only the `<project-name>.rwa` file and the `assets` folder with your audio/Pd assets.
 
 In our section about [RWA Player](../rwa-player), you will find all the necessary information to navigate the *RWA Player* mobile app and its integration with the *RWA Creator* software.
+
+Once the project is on the phone, see [Simulating Location on the Phone](./simulating-location-on-the-phone.md) for testing your soundwalk in close-to-real conditions - even when you are not on site.

@@ -9,7 +9,7 @@ This view provides **undo/redo** functionality. Snapshots (undo/redo steps), are
 ///
 
 !!! info "Snapshots"
-    The snapshots themselves are versions of the project files, stored in the `undo` folder of the project. When copying the project to an iPhone, make sure to ***not*** include this folder, as every snapshot will show up as an individual game in the [RWA Player]. When exporting the game, this undo folder will be automatically removed (see [FAQ: How to copy a game to the iPhone]).
+    The snapshots themselves are versions of the project files, stored in the `undo` folder of the project. When copying the project to an iPhone, make sure to ***not*** include this folder, as every snapshot will show up as an individual game in the [RWA Player]. When exporting the game, this undo folder will be automatically removed (see [Transferring Projects]).
 
 [RWA Player]: ../rwa-player/games-view.md
-[Transferring Projects]: exporting-rwa-projects.md
+[Transferring Projects]: ../creating-soundwalks/transferring-projects.md

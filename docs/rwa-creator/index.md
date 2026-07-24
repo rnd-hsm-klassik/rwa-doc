@@ -15,5 +15,5 @@ This manual provides a comprehensive guide to using the RWA Creator application,
 - [State View](./state-view.md)
 - [History View](./history-view.md)
 - [Log View](./log-view.md)
-## Integrating to the RWA Player mobile app
-- [Exporting RWA Creator Projects](./exporting-rwa-projects.md)
+
+To get your project onto the iPhone running *RWA Player*, see [Transferring Projects](../creating-soundwalks/transferring-projects.md) in the *Creating Soundwalks* section.

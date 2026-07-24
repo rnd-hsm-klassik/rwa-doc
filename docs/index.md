@@ -13,3 +13,10 @@ is used to create interactive binaural sounwalks.
 
 Soundwalks created in RWA Creator are used withing the [RWA Client App for iOS](https://github.com/funkerresch/rwaclient-ios).
 The iOS devices running the app is used with custom headphones, featuring RTK-GNSS positioning and headtracking.
+
+## Creating Soundwalks
+
+[Guides](./creating-soundwalks/index.md)
+
+Beyond the two application manuals, this section covers the artistic, creative and technical work on actual
+soundwalks - topics that span both applications and take you out into the field.
