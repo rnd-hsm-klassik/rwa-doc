@@ -1,6 +1,6 @@
 # RWA Creator
 
-<!-- put screenshot -->
+![rwa-creator-screenshot](assets/rwa-creator-screenshot.png)
 
 ## RWA Creator Manual
 
