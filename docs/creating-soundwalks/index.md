@@ -14,7 +14,7 @@ both applications and into the field.
     We are expanding this part of the documentation one topic at a time. Planned topics include making
     fieldrecordings, embedding sounds into the environment (EQ and impulse-response treatment), layering
     background atmos and binaural sources, and building an intuition for layering, distance, reflections,
-    damping and GPS accuracy. If a topic you need is still missing, the [FAQ](../faq.md) may already cover
+    damping and GPS accuracy. If a topic you need is still missing, the [FAQ](../faq) may already cover
     parts of it, otherwhise ask for it. Also, your input and experiences are very welcome, please send it
     our way (you can for example propose edits on GitHub).
 

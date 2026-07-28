@@ -116,7 +116,7 @@ nav:
       - Simulating Location on the Phone: creating-soundwalks/simulating-location-on-the-phone.md
       - Live GPS in RWA Creator: creating-soundwalks/live-gps-in-rwa-creator.md
   - FAQ:
-    - faq.md
+    - Editing in RWA Creator: faq/editing-in-rwa-creator.md
 
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc
