@@ -117,6 +117,7 @@ nav:
       - Live GPS in RWA Creator: creating-soundwalks/live-gps-in-rwa-creator.md
   - FAQ:
     - Editing in RWA Creator: faq/editing-in-rwa-creator.md
+    - Workin with Pure Data: faq/working-with-pd.md
 
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc
