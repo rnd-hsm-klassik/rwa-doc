@@ -35,6 +35,20 @@ declare -a FILES=(
     "stop_48dp_D16D6A_FILL1_wght300_GRAD-25_opsz48.svg:stop.svg"
     "cell_tower_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:syncwithclients.svg"
     "delete_48dp_434343_FILL0_wght300_GRAD-25_opsz48.svg:trashassets.svg"
+    "play_disabled_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:badgeMuted.svg"
+    "hotel_class_48dp_434343_FILL1_wght300_GRAD0_opsz20.svg:badgeMoving.svg"
+    "replay_48dp_434343_FILL1_wght300_GRAD0_opsz48.svg:badgeLooped.svg"
+    "warning_48dp_D16D6A_FILL1_wght300_GRAD0_opsz20.svg:badgeSamplerateMismatch.svg"
+    "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:playbackHeadphones1.svg"
+    "volume_mute_48dp_434343_FILL1_wght300_GRAD0_opsz48.svg:playbackSpeaker1.svg"
+    "pd.svg:badgePd.svg"
+    "waveform.svg:badgeAudio.svg"
+    "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48_1.svg:playbackHeadphones1.svg"
+    "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48_2.svg:playbackHeadphones2.svg"
+    "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48_5.svg:playbackHeadphones5.svg"
+    "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48_7.svg:playbackHeadphones7.svg"
+    "volume_mute_48dp_434343_FILL1_wght300_GRAD0_opsz48_1.svg:playbackSpeaker1.svg"
+    "volume_mute_48dp_434343_FILL1_wght300_GRAD0_opsz48_2.svg:playbackSpeaker2.svg"
 )
 
 # copy each file to each destination
