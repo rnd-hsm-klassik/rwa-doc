@@ -16,11 +16,11 @@ The *Scene List* shows all scenes of the current game. Selected scenes can be re
 | Next Scene      | None   | N/A | Specified scene to play next after current scene's playback finishes.                                                                                |
 | Time Out              | 0     |   ms  | Exit scene after the specified time.                                          |
 | Required Scenes       | null  | N/A   | Entry condition, state is only entered if the specified states have been visited already.                               |
-| Level            | -1    | ???   | **Not in use yet**        |
+| Level            | -1    | N/A   | Group Scenes by levels (identified by a unique level number) so that they can be played sequentially by using conditional fields like *Next Scene* for scenes or states.       |
 | Scene Radius          | 50    | m  | Radius distance of scene when *Area Type = Circle*. |
 | Scene Height          | 100   | m  | Height distance of scene when *Area Type = Rectangle* or *Square*. |
 | Scene Width           | 100   | m  | Width distance of scene when *Area Type = Rectangle* or *Square*. |
 | Exit offset           | 0     | m  | Specified distance offset for exiting the given scene.               |
 | States follow scene   | true | toggle | In editing mode, states are moved together with the scene.                              |                           |
-| Lock position   | true | toggle | **Not in use yet**                        |
+| Lock position   | true | toggle | This fixes the selected Scene's center to its current map position.     |
 | Disable fallback   | false | toggle | Lets the last active state remain active until a new state is activated.      |
