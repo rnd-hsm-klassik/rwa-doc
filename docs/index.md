@@ -2,12 +2,18 @@
 
 ## RWA Creator
 
+<!--iconutil -c iconset ../../../../rwa-creator/images/rwa-creator.icns -o ./rwa-creator.iconset-->
+<!--cp rwa-document.iconset/icon_32x32@2x.png rwa-document-icon-small.png-->
+![rwa-creator-icon-small](rwa-creator/assets/rwa-creator-icon-small.png){align=right}
+
 [Manual](./rwa-creator/index.md)
 
 RWA Creator, the [Desktop Application for Real World Audio (RWA)](https://github.com/funkerresch/rwacreator),
 is used to create interactive binaural sounwalks.
 
 ## RWA Player (iOS Client)
+
+![rwa-player-icon-small](rwa-player/assets/rwa-player-icon-small.png){align=right}
 
 [Manual](./rwa-player/index.md)
 
