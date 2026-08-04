@@ -93,6 +93,7 @@ nav:
   - Home: index.md
   - RWA Creator:
     - rwa-creator/index.md
+    - Release Notes: rwa-creator/release-notes.md
     - Getting Started: rwa-creator/getting-started.md
     - General Game Structure: rwa-creator/overview.md
     - Map View: rwa-creator/map-view.md
