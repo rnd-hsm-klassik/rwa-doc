@@ -96,12 +96,13 @@ nav:
     - Release Notes: rwa-creator/release-notes.md
     - Getting Started: rwa-creator/getting-started.md
     - General Game Structure: rwa-creator/overview.md
-    - Map View: rwa-creator/map-view.md
-    - Game View: rwa-creator/game-view.md
-    - Scene View: rwa-creator/scene-view.md
-    - State View: rwa-creator/state-view.md
-    - History View: rwa-creator/history-view.md
-    - Log View: rwa-creator/log-view.md
+    - User Interface:
+      - Map View: rwa-creator/map-view.md
+      - Game View: rwa-creator/game-view.md
+      - Scene View: rwa-creator/scene-view.md
+      - State View: rwa-creator/state-view.md
+      - History View: rwa-creator/history-view.md
+      - Log View: rwa-creator/log-view.md
   - RWA Player:
     - rwa-player/index.md
     - Getting Started: rwa-player/getting-started.md
