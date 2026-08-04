@@ -56,7 +56,11 @@ markdown_extensions:
   - tables
   - md_in_html
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.emoji:
       emoji_index: !!python/name:zensical.extensions.emoji.twemoji
@@ -121,6 +125,7 @@ nav:
     - Editing in RWA Creator: faq/editing-in-rwa-creator.md
     - Scenes and States: faq/scenes-and-states.md
     - Workin with Pure Data: faq/working-with-pd.md
+    - Technical Details: faq/technical-details.md
 
 repo_url: https://github.com/rnd-hsm-klassik/rwa-doc
 repo_name: rwa-doc
