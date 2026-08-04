@@ -5,6 +5,17 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
+## Version 1.4.1 (4 August 2026)
+
+[Download v1.4.1](https://drive.switch.ch/index.php/s/O7FanrpFdDzKu1W/download)
+
+### Microphone input fixed
+
+RWA Creator did not request the macOS Microphone permission when activating
+audio, resulting in no audio input in dynamic / custom Pd patchers. The next
+time you run a simulation you will be prompted to grant Microphone access to RWA
+Creator.
+
 ## Version 1.4.0 (3 August 2026)
 
 ### See your assets at a glance
