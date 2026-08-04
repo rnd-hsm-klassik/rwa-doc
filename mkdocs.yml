@@ -76,7 +76,7 @@ markdown_extensions:
               - rwa-creator/*
               - rwa-player/*
               - creating-soundwalks/*
-              - faq.md
+              - faq/*
 
 extra_javascript:
   - js/mathjax.js

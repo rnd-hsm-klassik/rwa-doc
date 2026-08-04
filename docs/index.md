@@ -26,3 +26,9 @@ The iOS devices running the app is used with custom headphones, featuring RTK-GN
 
 Beyond the two application manuals, this section covers the artistic, creative and technical work on actual
 soundwalks - topics that span both applications and take you out into the field.
+
+## FAQ
+
+[FAQ](./faq/editing-in-rwa-creator.md)
+
+Frequently Asked Questions and answers.
