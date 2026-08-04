@@ -43,9 +43,9 @@ icon, and double-clicking one opens the project, in the running app if RWA
 Creator is already open, otherwise the app is launched first. As with
 File > Open, this replaces the currently loaded project.
 
-<!--iconutil -c iconset rwa-document.icns-->
-<!--cp rwa-document.iconset/icon_32x32@2x.png rwa-document.png-->
-![RWA Document](./assets/rwa-document.png)
+<!--iconutil -c iconset ../../../../rwa-creator/images/rwa-document.icns -o ./rwa-document.iconset-->
+<!--cp rwa-document.iconset/icon_32x32@2x.png rwa-document-icon-small.png-->
+![RWA Document](./assets/rwa-document-icon-small.png)
 
 ### Keyboard shortcuts for everyday actions
 
