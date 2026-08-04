@@ -8,8 +8,8 @@
 
 [Manual](./rwa-creator/index.md)
 
-RWA Creator, the [Desktop Application for Real World Audio (RWA)](https://github.com/funkerresch/rwacreator),
-is used to create interactive binaural sounwalks.
+RWA Creator, the [Desktop Application for Real World Audio (RWA)](https://github.com/rnd-hsm-klassik/rwa-creator),
+is used to create and simulate interactive binaural sounwalks.
 
 ## RWA Player (iOS Client)
 
@@ -17,8 +17,8 @@ is used to create interactive binaural sounwalks.
 
 [Manual](./rwa-player/index.md)
 
-Soundwalks created in RWA Creator are used withing the [RWA Client App for iOS](https://github.com/funkerresch/rwaclient-ios).
-The iOS devices running the app is used with custom headphones, featuring RTK-GNSS positioning and headtracking.
+Soundwalks created in RWA Creator are loaded withing the [RWA Player App for iOS](https://github.com/rnd-hsm-klassik/rwa-client).
+The iOS devices running the app are used with custom headphones, featuring GPS positioning and headtracking.
 
 ## Creating Soundwalks
 
