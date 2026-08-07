@@ -5,16 +5,71 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
+## Version 1.4.3 (7 August 2026)
+
+[Download v1.4.3](https://drive.switch.ch/index.php/s/KyS69wp56l6KisK/download)
+
+### Multichannel Pure Data patches
+
+The **Playback Mode of a Pd-patch asset now does something**: it decides how
+many channels of spatial data your patch receives. Until now a patch always got
+a single set of values (`$0-azimuth1`, `$0-distance1`, `$0-elevation1`),
+whatever mode was selected, multichannel patches (using channel positions)
+simply could not be driven from the Creator.
+
+- Pick **Binaural-Stereo** and your patch receives two channels
+  (`$0-azimuth1`/`$0-azimuth2`, same for distance and elevation),
+  **Binaural-5Channel** five, **Binaural-7Channel** seven. The mono modes send
+  one channel, as before.
+- The channels honour **Channel Radius**, **Rotate Offset** and dragged **custom
+  channel positions** exactly like they do for audio assets: the channel dots
+  you place on the map are the positions your patch hears.
+- At start, every patch now also receives **`$0-numchannels`**: the number of
+  channels it will be streamed, so one patch can adapt itself to whatever mode
+  is selected.
+- Existing patches that only listen to the `...1` receivers keep working
+  unchanged, and **"Headtracker relative to source" off** still means: one set
+  of raw head azimuth/elevation data, your patch does its own spatialisation.
+- The **Auto** mode is hidden for patch assets: it depends on an audio file's
+  channel count, which a patch doesn't have.
+
+### 7-channel assets actually surround you now
+
+A bug made **all seven channels of a Binaural-7Channel asset collapse onto a
+single point** as soon as the simulation ran: the authored spread
+(−40/0/40/−80/80/−120/120°) was visible on the map but never reached your ears.
+Fixed, for audio assets and patches alike.
+
+### In step with RWA Player
+
+All of the above is mirrored in **RWA Player 1.3.5**: what you hear in the
+simulator is what visitors hear on the phone. Make sure the phones run the
+matching Player version before relying on multichannel patches in a walk.
+
+## Version 1.4.2 (7 August 2026)
+
+- **Selected assets stand out on the map.** An asset's satellite icons (channel
+  positions, the start position and the moving position of moving/rotating
+  assets) now take on the selection colour together with the asset icon itself.
+  With several multichannel or moving assets in view you can finally tell which
+  dots belong to the selected one.
+- **Three asset checkboxes show their real value again.** "Raw Sensors to Pd",
+  "GPS to Pd" and "Headtracker relative to source" displayed stale values when
+  you selected an asset (most visibly, "Headtracker relative to source" showed
+  unchecked although it defaults to on). Only the display was wrong: stored
+  projects were never affected. If you wondered why pd patches didn't receive
+  azimuth etc. despite "Headtracker relative to source" being unchecked, it's
+  because it was checked (default), but you couldn't see it.
+- **The "Required Scenes" field is gone from the Scene view.** It was never
+  implemented: anything you entered there was silently lost on save. The
+  (working) state-level Required States are untouched. If a future release
+  implements scene requirements, it will say so here.
+
 ## Version 1.4.1 (4 August 2026)
 
-[Download v1.4.1](https://drive.switch.ch/index.php/s/O7FanrpFdDzKu1W/download)
-
-### Microphone input fixed
-
-RWA Creator did not request the macOS Microphone permission when activating
-audio, resulting in no audio input in dynamic / custom Pd patchers. The next
-time you run a simulation you will be prompted to grant Microphone access to RWA
-Creator.
+- **Microphone input works again.** Pd patches using `[adc~]` received silence
+  in release builds. On first use after this update, macOS asks for microphone
+  permission: grant it and live input reaches your patches.
 
 ## Version 1.4.0 (3 August 2026)
 
