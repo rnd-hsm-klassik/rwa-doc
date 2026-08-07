@@ -33,7 +33,6 @@ screen.
 | --- | --- | --- |
 | `/register` | Hero name, IP address of the phone | You tap **Register** in the [Settings View]. The address is the phone's Wi-Fi address, with the cellular interface as fallback. RWA Creator replies to *that* address on port 8001. |
 | `/position` | longitude, latitude | Every GPS update, while **Send GPS to Creator** is on *and* the phone is not registered. See [Live GPS in RWA Creator]. |
-| `/dummy` | ignored | Twice before every registration toggle, to wake up the socket. RWA Creator has no handler for it and drops it. |
 
 [Settings View]: ../rwa-player/settings-view.md
 [Live GPS in RWA Creator]: ../creating-soundwalks/live-gps-in-rwa-creator.md
@@ -88,9 +87,6 @@ the [Log View] in RWA Creator, it reports a successful registration.
 
 Known bugs:
 
-- **Registration may need a second attempt.** The first **Register** tap after
-  launching the Player, or after changing the IP address, usually goes
-  unnoticed. Tapping it again resolves it.
 - **The Player stops listening when you leave the Control View.** Incoming Hero
   positions are only processed while that view is open.
 - **RWA Creator never forgets a device.** Unregistering on the phone is not
