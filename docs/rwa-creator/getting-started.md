@@ -2,7 +2,7 @@
 
 ## Installation
 
-Download the [latest version](https://drive.switch.ch/index.php/s/KyS69wp56l6KisK/download) of RWA Creator (v1.4.3, 2026-08-07, [Release Notes]). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
+Download the [latest version](https://drive.switch.ch/index.php/s/NzYt7nJEcFWNXPy/download) of RWA Creator (v1.4.4, 2026-08-08, [Release Notes]). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
 
 [Release Notes]: release-notes.md
 

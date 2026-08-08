@@ -5,6 +5,30 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
+## Version 1.4.4 (8 August 2026)
+
+[Download v1.4.4](https://drive.switch.ch/index.php/s/NzYt7nJEcFWNXPy/download)
+
+A stability release: it removes a family of crashes around deleting assets and
+states. If RWA Creator has ever quit on you while you were reorganising a scene,
+update.
+
+- **Leftover asset dots on the map no longer crash the app.** When you selected
+  a state without assets, the previous state's asset markers stayed visible on
+  the map; clicking one of them after its state was gone (deleted, undone, or
+  the game reloaded) crashed RWA Creator. Typical trigger: select an empty
+  fallback or background state, delete the state you were just working on, then
+  click one of its still-visible dots. The map now always clears the old
+  markers, including ones "hidden" by the asset mute/disable toggle, which
+  stayed clickable although invisible.
+- **Backspace in an empty asset list no longer crashes.** Deleting assets one
+  after another was fine, but one Backspace too many after the last asset was
+  gone (easily done, holding the key repeats it) quit the app.
+- **Deleting an asset now really removes it**, instead of quietly keeping it in
+  memory. As a consequence, deleting assets is now refused while the simulation
+  is running, the same rule that already applied to dragging them. Stop the
+  simulation first.
+
 ## Version 1.4.3 (7 August 2026)
 
 [Download v1.4.3](https://drive.switch.ch/index.php/s/KyS69wp56l6KisK/download)
