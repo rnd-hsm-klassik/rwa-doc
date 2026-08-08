@@ -31,8 +31,6 @@ update.
 
 ## Version 1.4.3 (7 August 2026)
 
-[Download v1.4.3](https://drive.switch.ch/index.php/s/KyS69wp56l6KisK/download)
-
 ### Multichannel Pure Data patches
 
 The **Playback Mode of a Pd-patch asset now does something**: it decides how
