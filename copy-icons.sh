@@ -38,6 +38,7 @@ declare -a FILES=(
     "play_disabled_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:badgeMuted.svg"
     "hotel_class_48dp_434343_FILL1_wght300_GRAD0_opsz20.svg:badgeMoving.svg"
     "replay_48dp_434343_FILL1_wght300_GRAD0_opsz48.svg:badgeLooped.svg"
+    "close_48dp_D16D6A_FILL0_wght700_GRAD0_opsz48.svg:badgeFileMissing.svg"
     "warning_48dp_D16D6A_FILL1_wght300_GRAD0_opsz20.svg:badgeSamplerateMismatch.svg"
     "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:playbackHeadphones1.svg"
     "volume_mute_48dp_434343_FILL1_wght300_GRAD0_opsz48.svg:playbackSpeaker1.svg"
