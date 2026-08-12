@@ -73,6 +73,26 @@ Click+drag allows for editing the state radius.
 | Enable custom-channel positions | false   | toggle     | When the asset's *Playback Mode* is *Binaural-Stereo*, it is possible to drag each channel separately to different positions in the map of the *State View*.                   |
 | Always play from start          | true   | toggle     | Playback begins from the start of the asset's file when enabled. When disabled, playback begins where the last playback stopped.                 |
 
+## Asset List View
+
+All assets in the selected state are shown in the *Asset List View*. Dragging audio files or Pd patchers into this view addes them to the state. You can change the name of an asset by double-clicking it. Pressing the ++delete++ removes selected assets from the list. Swiping accross the list or ++command++-clicking on list entries selects multiple assets.
+
+### Badges
+
+:rwa-badgeLooped: The asset set loop.
+
+:rwa-badgeMoving: The asset set to either moving or rotating.
+
+:rwa-badgeMuted: The asset is muted / disabled.
+
+:rwa-badgePd: The referenced file is a *dynamic Pd patcher*.
+
+:rwa-badgeSamplerateMismatch: The sample rate of the audio file referenced by this asset doesn't match the project sample rate.
+
+:rwa-badgeFileMissing: The audio file or Pd patcher referenced by this asset is missing from the `assets` folder.
+
+Audio assets show a badge describing the selected playback mode: A headphones icon (binaural), each with its channel count: :rwa-playbackHeadphones1: :rwa-playbackHeadphones2: :rwa-playbackHeadphones5: :rwa-playbackHeadphones7:, or a speaker icon: :rwa-playbackSpeaker1: :rwa-playbackSpeaker2: for standard mono or stereo playback  respectively.
+
 ## Understanding Damping Parameters
 
 You can choose to have no damping at all, in that case the sound will be just as loud no matter how far you are from the source.
