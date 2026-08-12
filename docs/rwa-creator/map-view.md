@@ -42,9 +42,14 @@ When active, the hero jumps to locations selected through *Select Scene* or *Sel
 
 ### Toggle remove assets on delete
 
-:rwa-trashassets: **Trash**: Assets will be removed from asset-folder when deleted from the list.
+:rwa-donttrashassets: **Don't Trash**: Deleting assets from the *State View* asset list leaves the files in the projects asset folder.
 
-:rwa-donttrashassets: **Don't Trash**: Deleting assets in the list leaves the files in the asset-folder.
+:rwa-trashassets: **Trash**: Deleting an asset also removes its referenced files (audio or pd patch).
+
+!!! tip "A removed file is not deleted permanently"
+    It is kept in a session trash inside the project's `tmp` folder, and reverting to an earlier snapshot in the [History View](./history-view.md) brings both the asset entry and its file back.
+    On quitting RWA Creator (or opening another project) the session trash is moved to the system trash.
+    From there, a file can only be brought back manually, by moving it into the project's `assets` folder again.
 
 ### :rwa-syncwithclients: Toggle Sharing Server
 
