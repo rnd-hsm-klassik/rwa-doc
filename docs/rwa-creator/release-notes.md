@@ -5,9 +5,44 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
-## Version 1.4.4 (8 August 2026)
+## Version 1.4.7 (13 August 2026)
 
-[Download v1.4.4](https://drive.switch.ch/index.php/s/NzYt7nJEcFWNXPy/download)
+[Download v1.4.4](https://drive.switch.ch/index.php/s/M8ddQOOOyJfyJVz/download)
+
+Convolution reverb in Pd patches! You also need RWA Player 1.3.7.
+Details coming soon.
+
+## Version 1.4.6 (13 August 2026)
+
+Maaaany bugfixes and improvements. Details coming soon.
+
+## Version 1.4.5 (12 August 2026)
+
+This release is about stopping and restarting the simulation: it is now
+graceful to the ears, reliable, and faster with binaural patches.
+
+- Start/stop fades in simulation: Added short fade-in/out to avoid clicks at
+  beginning/end of simulation. The volume slider is smoothed as well, so
+  dragging it no longer zippers.
+- Fixed a latent bug involving leftover messages from previous simulation runs:
+  An asset that was still fading out when you stopped the simulation could leave
+  a timer behind that fired *into the next run*, some seconds in, an unrelated
+  asset would simply switch itself off, seemingly at random. If you have ever
+  restarted a simulation and lost a sound for no visible reason, this was it.
+  This only affected audio assets, not dynamic pd patches.
+- Faster restarts with binaural assets.
+- Crash fixes for reverb external: Stopping a simulation whose game used the
+  reverb/convolution externals with array-loaded IRs could corrupt memory and
+  crash the app. This a preparatory step to add a reverb external in future
+  versions!
+- Tidier built-in patches: The shipped patches are easier to read (unified zoom
+  level, no more scrolling objects into view, stray subpatcher windows, or
+  off-screen windows).
+- A quieter log: Leftover debug prints in the shipped audio asset patches (which
+  flooded the Log View with hundreds of lines on every stop) are removed, and
+  the filter-loading messages now say what actually happened. 
+
+## Version 1.4.4 (8 August 2026)
 
 A stability release: it removes a family of crashes around deleting assets and
 states. If RWA Creator has ever quit on you while you were reorganising a scene,
