@@ -7,14 +7,69 @@ detail behind each entry, see [CHANGELOG.md].
 
 ## Version 1.4.7 (13 August 2026)
 
-[Download v1.4.4](https://drive.switch.ch/index.php/s/M8ddQOOOyJfyJVz/download)
+[Download v1.4.7](https://drive.switch.ch/index.php/s/M8ddQOOOyJfyJVz/download)
 
-Convolution reverb in Pd patches! You also need RWA Player 1.3.7.
-Details coming soon.
+**A new convolution reverb external is now available in your Pd patches!** Now
+you can use impulse responses recorded on site to embed your creations into the
+environment (inside you custom Pd patchers, using `[vas_reverb~]`). Prepared in
+RWA Creator 1.4.5, it is completed by RWA Player 1.3.7, released alongside this
+version. Make sure the phones run that Player before relying on reverb in a
+walk. 
+
+Copying states between projects now works properly, and scenes/states got the
+same delete protections assets received in 1.4.6.
+
+- **Pasting states into another project now reliably brings the audio and Pd
+  files along.** Copied states used to arrive without their files: everything
+  played fine for the rest of the session, but on the next load (Creator and
+  Player alike) the assets were missing, because the files were not copied into
+  the target project's `assets/` folder. Pasting now copies them. If the target
+  already has a file of the same name with identical content it is simply
+  reused; a same-named file with *different* content is not overwritten: the
+  incoming file is copied as `name-2.ext` and the pasted asset renamed to match.
+  **Watch out for that rename if a dynamic Pd patch refers to the file by its
+  original name**! This is not covered by the checks.
+- **Clicking a state pasted from another project no longer crashes.** The pasted
+  state still pointed at the source project's assets, which are gone once you
+  switch projects; selecting it quit the app.
+- **Deleting scenes and states is now refused while the simulation runs**, with
+  a warning, the same rule as for assets since 1.4.6. The running simulation
+  holds on to the current scene and state; deleting them under it could crash.
+  Stop the simulation first.
+- **The scene and state lists no longer lie after a refused delete.** Trying to
+  delete the last remaining scene is refused (a game always keeps one scene),
+  but the scene vanished from the list anyway while staying in the game, and a
+  do-nothing undo step was recorded on top. The same could happen with the
+  toolbar's Scene → Remove, which left the deleted scene selectable in the list.
+  Lists now always show what is actually in the game, refusals appear as
+  warnings in the log, and undo steps are only written when something was really
+  deleted. After deleting a state the selection lands on the fallback state, so
+  holding Backspace cannot chain-delete states you never selected.
 
 ## Version 1.4.6 (13 August 2026)
 
-Maaaany bugfixes and improvements. Details coming soon.
+Deleting assets, *and undoing it*, can now be trusted.
+
+- **Deleting an asset no longer makes a second, unrelated entry vanish.** After
+  a delete, the first-added asset of the state (typically the Pd patch)
+  disappeared from the list while staying in the game, and reappeared on the
+  next occasion (adding an asset, switching states, reloading), perceived as
+  "deleted assets come back". One delete now removes exactly one asset.
+- **Deleted asset *files* are no longer gone for good.** With :rwa-trashassets:
+  "On asset delete: remove file" active, the file now moves to a session trash
+  inside the project instead of being erased. Undoing the delete brings the file
+  back into `assets/` automatically (noted in the [Log View]); when the session
+  ends, the session trash is forwarded to the system trash as a last-resort
+  recovery. Files never silently vanish any more.
+- **Missing-file badge.** An asset whose file is absent from the `assets/`
+  folder now shows a badge :rwa-badgeFileMissing: in the asset list instead of
+  looking like a healthy asset.
+- **Deleting an asset while the simulation runs is now visibly refused** with a
+  warning. It used to look deleted, only to resurface later.
+- **Edits after an undo are no longer silently lost.** Restoring an undo
+  snapshot (and in rare cases opening a project) could leave the attribute views
+  connected to leftover objects from before the restore; everything you changed
+  there was never saved. The views now always reconnect to the restored game.
 
 ## Version 1.4.5 (12 August 2026)
 
