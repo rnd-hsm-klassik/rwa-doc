@@ -76,9 +76,9 @@ Deleting assets, *and undoing it*, can now be trusted.
 This release is about stopping and restarting the simulation: it is now
 graceful to the ears, reliable, and faster with binaural patches.
 
-- Start/stop fades in simulation: Added short fade-in/out to avoid clicks at
-  beginning/end of simulation. The volume slider is smoothed as well, so
-  dragging it no longer zippers.
+- **Start :rwa-start: and Stop :rwa-stop: fades in simulation.** Added short
+  fade-in/out to avoid clicks at beginning/end of simulation. The volume slider
+  is smoothed as well, so dragging it no longer zippers.
 - Fixed a latent bug involving leftover messages from previous simulation runs:
   An asset that was still fading out when you stopped the simulation could leave
   a timer behind that fired *into the next run*, some seconds in, an unrelated
@@ -86,14 +86,14 @@ graceful to the ears, reliable, and faster with binaural patches.
   restarted a simulation and lost a sound for no visible reason, this was it.
   This only affected audio assets, not dynamic pd patches.
 - Faster restarts with binaural assets.
-- Crash fixes for reverb external: Stopping a simulation whose game used the
-  reverb/convolution externals with array-loaded IRs could corrupt memory and
-  crash the app. This a preparatory step to add a reverb external in future
-  versions!
-- Tidier built-in patches: The shipped patches are easier to read (unified zoom
+- Crash fixes for reverb external `[vas_reverb~]`: Stopping a simulation whose
+  game used the reverb/convolution externals with array-loaded IRs could corrupt
+  memory and crash the app. This a preparatory step to add a reverb external in
+  future versions!
+- **Tidier built-in patches.** The shipped patches are easier to read (unified zoom
   level, no more scrolling objects into view, stray subpatcher windows, or
   off-screen windows).
-- A quieter log: Leftover debug prints in the shipped audio asset patches (which
+- **A quieter log.** Leftover debug prints in the shipped audio asset patches (which
   flooded the Log View with hundreds of lines on every stop) are removed, and
   the filter-loading messages now say what actually happened. 
 
