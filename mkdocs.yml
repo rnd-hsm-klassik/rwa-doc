@@ -121,6 +121,8 @@ nav:
     - Location Data & Field Work:
       - Simulating Location on the Phone: creating-soundwalks/simulating-location-on-the-phone.md
       - Live GPS in RWA Creator: creating-soundwalks/live-gps-in-rwa-creator.md
+    - Postproduction:
+      - Mixing Soundwalks: creating-soundwalks/mixing-soundwalks.md
   - FAQ:
     - Editing in RWA Creator: faq/editing-in-rwa-creator.md
     - Scenes and States: faq/scenes-and-states.md

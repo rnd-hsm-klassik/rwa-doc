@@ -48,7 +48,7 @@ Click+drag allows for editing the state radius.
 | Fade-Out Time             | 50      | ms   | Asset time from full gain until finishing playback.                                                                                                                                                  |
 | Crossfade Time            | 2000    | ms   | Crossfade time if loop toggle is activated.                                                                                                             |
 | Offset Time            | 0    | ms   | Offset playback start.                                                        |
-| Gain                      | 1.0     |      |                                                                                                                                                   |
+| Gain (dB)                  | 0      | dB    | Gain factor for this asset (trim / boost)                                                                                                         |
 | Altitude                   | 1.0     |  m    |                                                                   Z-offset.                                                                                                                                          |
 | Channel Radius            | 20.0    | m    | Distance from center for multichannel binaural playback.                                                                                           |
 | Rotate Frequency          | 0.0     | Hz   | Rotations per second.                                                                                                                              |

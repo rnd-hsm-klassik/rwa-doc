@@ -17,6 +17,7 @@ The *Scene List* shows all scenes of the current game. Selected scenes can be re
 | Time Out              | 0     |   ms  | Exit scene after the specified time.                                          |
 | Required Scenes       | null  | N/A   | Entry condition, state is only entered if the specified states have been visited already.                               |
 | Level            | -1    | N/A   | Group Scenes by levels (identified by a unique level number) so that they can be played sequentially by using conditional fields like *Next Scene* for scenes or states.       |
+| Gain (dB)             | 0     | dB | Gain factor for all states in this scene. |
 | Scene Radius          | 50    | m  | Radius distance of scene when *Area Type = Circle*. |
 | Scene Height          | 100   | m  | Height distance of scene when *Area Type = Rectangle* or *Square*. |
 | Scene Width           | 100   | m  | Width distance of scene when *Area Type = Rectangle* or *Square*. |

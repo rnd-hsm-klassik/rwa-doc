@@ -19,6 +19,7 @@ The *State List* shows all States of the selected Scene. Selected States can be 
 | Time Out              | 0     |   ms  | Exit state after the specified time.                                          |
 | Min stay time         | 4     |   ms  | Specified minimum activation time for the given state before moving to the next one.                                      |
 | Required States       | null  | N/A   | Entry condition, state is only entered if the specified states have been visited already.                               |
+| Gain (dB)             | 0     | dB | Gain factor for all assets in this state. |
 | Longitude             | Lon. coordinate   | Decimal Degrees    | The longitude coordinate for the given state.                                                          |
 | Latitude              | Lat. coordinate   | Decimal Degrees    | The latitude coordinate for the given state.                                                          |
 | State Radius          | 50    | m  | Radius distance of state when *Area Type = Circle*. |
