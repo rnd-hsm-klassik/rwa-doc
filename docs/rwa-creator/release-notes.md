@@ -5,9 +5,130 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
-## Version 1.4.7 (13 August 2026)
+## Version 1.5.0 (19 August 2026)
 
-[Download v1.4.7](https://drive.switch.ch/index.php/s/M8ddQOOOyJfyJVz/download)
+A feature release: mixing across scenes, states and assets, patches that can
+sound different on every trigger (proper random), and a large repair of undo and
+the save-on-quit behaviour.
+
+[Download v1.5.0](https://drive.switch.ch/index.php/s/e2pNsP7eV11HEyw/download)
+
+### Mixing: gain on scenes and states, in dB
+
+Scenes and states now have a **gain of their own**, next to the asset gain you
+already know. The three multiply: raising a state lifts every asset in it by
+the same amount, raising a scene lifts everything below it. Instead of
+retouching twenty assets to make a state quieter, you set the state.
+Details in [Mixing Soundwalks](../creating-soundwalks/mixing-soundwalks.md).
+
+- All gain fields are now shown and edited in **dB**.
+- While the simulation runs, a gain edit is audible immediately,
+  no restart needed.
+- Older projects load unchanged (scenes and states start at unity).
+
+### A fresh random seed for every Pd patch activation
+
+Each time an asset patch is activated it now receives a **`<tag>-seed`**: a new
+random number your patch can feed into `[random]` and friends. A patch that
+draws from it sounds different every time the state is entered, instead of
+repeating the same "random" sequence in every run. Patches that ignore the
+receiver are unaffected.
+
+### Open an asset in its own application
+
+**Shift+double-click** an asset in the asset list to open its file in the OS
+default application: Pd for patches, your audio editor for sound files
+(ocenaudio recommended). Plain double-click still renames. A missing file or
+missing default application is reported in the Log View.
+
+### The save-on-quit question finally behaves
+
+- It only appears when the project **really has unsaved changes**. Opening a
+  game, zooming the map, clicking through scenes and quitting asks nothing.
+  Undoing back to the saved version counts as unmodified again.
+- **Cancel now cancels.** It used to ask on every quit and then quit anyway,
+  whatever you answered.
+- **New** and **Open** ask the same question before replacing a modified
+  project, instead of silently throwing your changes away. The question names
+  what is about to happen.
+
+### Undo and the History View repaired
+
+Several long-standing undo problems had one root: projects that arrived by zip,
+git or a hand copy have no `undo/` folder, and RWA Creator never created one.
+Every undo step was then dropped without a word, and the History View listed
+some unrelated directory, where clicking an entry **wiped the current project**.
+
+- The project folders are created on open, so undo works for any project,
+  including one you have not saved yet (its steps go to a scratch workspace and
+  move over on Save as).
+- The History View only ever lists your project's own snapshots, in the correct
+  order past ten steps.
+- An unreadable snapshot leaves your project untouched and warns, instead of
+  loading an empty game.
+- Map tiles are cached inside the project again, instead of landing in whatever
+  folder the app happened to start from.
+
+### Further fixes
+
+- **Audio files edited outside RWA Creator no longer keep a stale length.**
+  Duration, channel count and sample rate were read once and then cached until
+  the project was reopened, so a trimmed or converted file kept its old
+  duration, which broke loop crossfades and was written into the `.rwa` for the
+  Player to believe. The values are now re-read whenever you save, copy or
+  export a project, with a log entry per changed file and a warning when a
+  crossfade is now longer than the file. **After editing assets outside the
+  app, save the project** to pick the changes up.
+- File dialogues now open in the **folder you last used**, remembered across
+  restarts. *Save Version as…* still starts in the current project's folder.
+
+## Version 1.4.9 (18 August 2026)
+
+A working pass over the built-in playback patches: several audible artefacts at
+the start of playback and in loops are gone.
+
+- **Equal-power crossfades when looping**, and one single fade writer instead of
+  several controllers fighting each other in some cases: no more zipper noise
+  and no more double crossfade.
+- **Fade-in and crossfade no longer run at the same time** when an asset
+  starts. Playback now does what the attributes say. Note this sounds different
+  from previous versions.
+- **The click at the beginning of playback is gone**, caused by the distance
+  scaling jumping from zero to the first real distance value (linear scaling
+  additionally divided by zero). Playback now ramps in from far away.
+- **Smooth Distance is actually applied.** (plain) mono- and stereo patches
+  ignored the attribute and always used 10 ms ramps.
+- **Ground reflections are removed from the binaural patches.** They sounded
+  unrealistic in close proximity and trimming them did not give satisfying
+  results. Both the original and the trimmed version are parked as
+  `ground-reflections.pd` next to the patches in `puredata/`, add them back into
+  your own patches if you like them.
+- **Develop the player patches in a normal Pd.** The `oggread~` external now
+  builds as a Pd library (`make -C pd_externals/rwa-lib install`, then add
+  `~/Library/Pd/rwa` to Pd's search path), so the `ogg` patches in `puredata/`
+  can be opened, heard and edited outside RWA Creator.
+
+## Version 1.4.8 (14 August 2026)
+
+Engine fixes around scene changes, all mirrored in RWA Player.
+
+- **Overlapping scenes no longer ping-pong.** Standing where two scene areas
+  overlap switched the scene many times per second, restarting the background
+  state each time and using up the whole player pool within a second. You now
+  stay in the scene you are in until you have actually left its area, which
+  makes overlapping scene areas usable.
+- **Background assets of a scene you left no longer play forever.** Re-entering
+  a scene while its background was still fading out started a second copy that
+  the engine could not track: it never stopped, never updated and looped
+  endlessly. Quick re-entries now crossfade cleanly.
+- **States of the scene you just left no longer trigger.** Right after a scene
+  change, a GPS state of the old scene could activate once more and play its
+  assets into the new scene.
+- **Mono assets no longer use up the player pool.** Ending a mono (WAV) asset
+  released the wrong slot, so over a session fewer and fewer mono assets could
+  start.
+
+## Version 1.4.7 (13 August 2026)
 
 **A new convolution reverb external is now available in your Pd patches!** Now
 you can use impulse responses recorded on site to embed your creations into the
