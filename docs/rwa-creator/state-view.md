@@ -43,7 +43,7 @@ Click+drag allows for editing the state radius.
 | Damping Trim              | 2.0     |      | Factor before the clipping occurs, 1 is for free field.                                                                                            |
 | Damping Min               | 0.0     |      | Lower limit of *Damping Factor*.                                                                                                                   |
 | Damping Max               | 1.0     |      | Upper limit of *Damping Factor*.                                                                                                                   |
-| Smooth Distance           | 10.0    | ??   | **Not in use yet**                                                                                             |
+| Smooth Distance           | 10.0    | ms   | Ramp time for interpolation of distance values.                                                                                                    |
 | Fade-In Time              | 50      | ms   | Asset time from starting playback until full gain.                                                                                                                                                  |
 | Fade-Out Time             | 50      | ms   | Asset time from full gain until finishing playback.                                                                                                                                                  |
 | Crossfade Time            | 2000    | ms   | Crossfade time if loop toggle is activated.                                                                                                             |

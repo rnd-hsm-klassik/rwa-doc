@@ -32,7 +32,7 @@ The *State List* shows all States of the selected Scene. Selected States can be 
 | Leave after assets finish | false | toggle | Automatically exits state when the assets' playback finishes.                           |
 | Leave only after assets finish | false | toggle | Locks player into the given state and prevents their exit from state until the assets' playback time ends.                       |
 | Lock position   | false | toggle | In editing mode, it becomes impossible to drag and change the state's position.                              |
-| State within state   | false | toggle | **Not in use yet**                        |
+| State within state   | false | toggle | Enables this state to manage other states within itself.                       |
 
 ## Notes
 
