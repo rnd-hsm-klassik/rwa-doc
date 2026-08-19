@@ -8,6 +8,22 @@ RWA Creator is a software where you can create GPS-based soundwalks, also referr
 2. A **scene** consists at least of two **states**: a *background* and a *fallback state*. The *background state* is always active for the whole *scene*. The *fallback state* is entered if no other (except the *background state*) is active. <!-- A new *state* can either be created by double clicking into the *map view*, or by select *new state* from the state menu. --> Every other state defines a geographical area of activation, like scenes.
 3. A **state** is a container for **assets**. An asset can either be an *audio file* or a *Pure Data patcher*, that is placed at a specific location.
 
+```mermaid
+graph TD
+  G["Game (.rwa project)"] --> S1["Scene 1 (area)"]
+  G --> S2["Scene 2 (area)"]
+  S1 --> BG["Background state<br/>(always on in the scene)"]
+  S1 --> FB["Fallback state<br/>(when no other state is active)"]
+  S1 --> ST1["State A (area)"]
+  S1 --> ST2["State B (area)"]
+  ST1 --> A1["Asset: river.wav"]
+  ST1 --> A2["Asset: voice.ogg"]
+  ST2 --> A3["Asset: birds.pd"]
+  BG --> A4["Asset: wind.wav"]
+```
+
+The *Background* and *Fallback* states are created with every scene and have **no area** of their own: they are entered by the engine, not by walking somewhere. Their state marker on the map is only an editing anchor and can be moved out of the way. The positions of their *assets*, on the other hand, matter just like anywhere else.
+
 - All views display by default the last touched *scene*, *state* and *asset*. Therefore, if a state is touched within the *map view*, the *state view* automatically displays the same *state*.
 
 ## Moving Between Layers
