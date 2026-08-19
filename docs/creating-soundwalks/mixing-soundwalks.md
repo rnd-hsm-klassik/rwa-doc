@@ -20,6 +20,24 @@ every **scene** has its own gain, and they are cumulative:
 - The values are independent: changing the state gain does not rewrite the gains
   of its assets. The Creator and the Player multiply the three at playback time.
 
+<div class="float-right" markdown>
+
+| Factor | Gain  | 
+| --- | -------- |
+| 1.0 |  0    dB |
+| 0.9 | -0.9  dB |
+| 0.8 | -1.9  dB |
+| 0.7 | -3.1  dB |
+| 0.6 | -4.4  dB |
+| 0.5 | -6.0  dB |
+| 0.4 | -7.9  dB |
+| 0.3 | -10.5 dB |
+| 0.2 | -13.9 dB |
+| 0.1 | -20   dB |
+| 0.0 | -inf  dB |
+
+</div>
+
 The fields are called **Gain (dB)** in the asset, state and scene attribute
 views. `0` is unity, `-6` is roughly half as loud, `+6` roughly twice, `-inf` is
 silent. Values above 0 dB are allowed but watch for clipping: the master volume
@@ -28,7 +46,7 @@ slider in the toolbar sits after everything else and does not prevent it.
 If you are used to the way gain was set in previous versions (pre 1.5.0): The
 project still stores those values, it's just the UI that translates it to a more
 relatable unit: $dB = 20 \cdot log_{10} A$ and $A = 10^{ \frac{20}{dB} }$
-respectively.
+respectively. Check the table for orientation / comparison.
 
 **Mixing while the simulation runs.** Gain changes take effect immediately, so
 you can walk the simulator through a scene, listen, and adjust states or whole

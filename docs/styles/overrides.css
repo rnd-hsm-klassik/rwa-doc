@@ -17,3 +17,30 @@
 .md-typeset .twemoji:has(svg[fill="#9DC384"]) {
     color: #9DC384 !important;
 }
+
+/* tables: float left or right  */
+
+.md-typeset .float-right,
+.md-typeset .float-left {
+  margin-block: 0 1rem;
+}
+
+.md-typeset .float-right { float: right; margin-left: 1.5rem; }
+.md-typeset .float-left  { float: left;  margin-right: 1.5rem; }
+
+/* prevent vertical mis-alignment */
+.md-typeset .float-right > :first-child,
+.md-typeset .float-left  > :first-child { margin-top: 0; }
+
+/* stop a tall float from bleeding into the next section */
+.md-typeset :is(h1, h2, h3) { clear: both; }
+
+/* collapse to a single column on narrow screens */
+@media screen and (max-width: 44.9375em) {
+  .md-typeset :is(.float-right, .float-left) {
+    float: none;
+    width: auto;
+    margin-inline: 0;
+    margin-block: 1rem;
+  }
+}
