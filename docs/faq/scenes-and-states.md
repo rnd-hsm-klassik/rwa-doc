@@ -115,10 +115,11 @@ you out of it:
 
 **Conditions for entering**
 
-* *Required states* - the state only opens once you have already visited the
+* *Required states*: the state only opens once you have already visited the
   states it names. If you arrive without them, you are turned away, and if a
   *hint state* is configured, you are sent there instead (a good place for a
-  "you are missing something" cue).
+  "you are missing something" cue). See the example and explanation to [the
+  question](#how-do-i-use-required-and-hint-states) below.
 * *Enter only once* - the state can be visited once per walk and never again.
 
 **Conditions for leaving**
@@ -130,12 +131,76 @@ you out of it:
   played out.
 * *Leave only after assets finish*: walking out is not enough; the state holds
   on until its audio is done. Use this when a sound must not be cut off
-  mid-sentence.
+  mid-sentence for example.
 
 **Where you go next**
 
 * *Next state* / *next scene* send you to a specific destination when the state
   ends. With neither set, you fall back to the scene's fallback state.
+
+### How do I use *required* and *hint* states?
+
+The engine remembers every state you have entered during a walk (the *visited
+states*). *Required states* let a state check that memory before it activates,
+and the *hint state* is where you are sent instead when the check fails (and a
+*hint state* is set). Together they are enough for simple puzzle mechanics:
+*find the key, then the door opens*.
+
+A minimal "locked door" needs three states in one scene:
+
+1. **`Key`**: an ordinary state somewhere in the scene. Entering it is what
+   "picks up" the key: the engine records the visit automatically. Give it an
+   asset that tells the listener they found or triggered something.
+2. **`Door`**: the gated state. This is where the actual content of the scene
+   sits. In the *State view*, type `Key` into its **Required States** field and
+   choose `Door locked` as its **Hint State**.
+3. **`Door locked`**: the hint. Set its **State Type** to *Hint* and give it a
+   "the door won't open... maybe there is a key nearby?" asset. Enable *Leave
+   after assets finish* so the walker drops back to the fallback state once the
+   hint has played.
+
+What the walker experiences: walking into the `Door` area without having been
+in `Key` plays the locked-door message; the door then stays shut until they
+leave its area, visit `Key`, and come back - at which point it opens normally.
+
+**Multiple required states.**: The Required States field takes a comma-separated
+list: `Key, Crowbar, Password`. This is an *and*: every listed state must have
+been visited before the gate opens. Names must match the state names in the same
+scene exactly.[^non-matching-required] The single hint state fires no matter
+which of the required states is missing.
+
+[^non-matching-required]: Entries that don't match any state are silently dropped
+when you confirm the field, so re-select the state afterwards and check which
+names survived.
+
+**What counts as "visited".** A state is recorded as visited the moment it is
+*entered*, the walker does not have to stay or hear the assets out. The list
+survives scene changes, so progress carries across the whole walk, and is
+cleared when the game is started. Two things do **not** count: a gated state
+that turned the walker away, and a hint state that was reached by redirect
+rather than by walking into it.
+
+#### Hint state behaviour
+
+- Each state has at most one hint state, chosen from the states of the same scene.
+- The hint fires once per approach: the blocked state latches, and only unlatches
+  when the walker leaves its area (see the re-entry latch above).
+- Setting the hint's type to *Hint* keeps it out of the normal geographic
+  evaluation. It doesn't need an area of its own and can only be reached as a
+  hint. You can point it at a regular GPS state instead, but if the walker is
+  outside that state's area, the next evaluation will throw them out
+  - so type *Hint* is almost always what you want.
+- ==Because a *Hint*-typed state has no area to leave, give it an exit of its own:
+  *Leave after assets finish*, a *Timeout*, or a *Next state* / *Next scene*==.
+- The hint redirect only happens on a failed required-states check; a state that
+  refuses entry because of *Enter only once* turns the walker away silently.
+
+**Mind your names.** Required states and hint states are stored as plain state
+names. Renaming or deleting a state does *not* update the fields of states that
+refer to it, and nothing warns you: a gate requiring a name that no longer
+exists can never open, and a dangling hint reference simply stops the hint from
+activating. After renaming states, walk through the *Required States* and *Hint
+State* fields of the scene once, and check that the names match.
 
 ### Tips for reliable triggering outdoors
 
