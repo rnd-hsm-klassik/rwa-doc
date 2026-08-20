@@ -112,9 +112,10 @@ nav:
     - Getting Started: rwa-player/getting-started.md
     - Overview: rwa-player/overview.md
     - Games View: rwa-player/games-view.md
-    - Control Data View: rwa-player/control-data-view.md
+    - Control View: rwa-player/control-data-view.md
     - Map View: rwa-player/map-view.md
     - Diagnostics View: rwa-player/diagnostics-view.md
+    - Settings View: rwa-player/settings-view.md
   - Creating Soundwalks:
     - creating-soundwalks/index.md
     - Transferring Projects: creating-soundwalks/transferring-projects.md

@@ -33,7 +33,7 @@
 .md-typeset .float-left  > :first-child { margin-top: 0; }
 
 /* stop a tall float from bleeding into the next section */
-.md-typeset :is(h1, h2, h3) { clear: both; }
+/* .md-typeset :is(h1, h2, h3) { clear: both; } */
 
 /* collapse to a single column on narrow screens */
 @media screen and (max-width: 44.9375em) {
