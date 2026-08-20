@@ -1,2 +1,0 @@
-# RWA iOS Client Manual
-
