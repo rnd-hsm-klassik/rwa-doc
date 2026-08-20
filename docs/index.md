@@ -32,3 +32,9 @@ soundwalks - topics that span both applications and take you out into the field.
 [FAQ](./faq/editing-in-rwa-creator.md)
 
 Frequently Asked Questions and answers.
+
+## References
+
+Resch, T. (2015). "RWA - A Game Engine for Real World Audio Games."
+*Proceedings of the International Conference on New Interfaces for Musical Expression (NIME)*, pp. 392-395.
+[nime.org/proceedings/2015/nime2015_269.pdf](https://www.nime.org/proceedings/2015/nime2015_269.pdf)

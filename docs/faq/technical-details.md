@@ -1,6 +1,8 @@
 # Technical Details
 
-Written against RWA Player 1.3.0 and RWA Creator 1.4.1.
+Written against RWA Player 1.3.0 and RWA Creator 1.4.1; ports and messages unchanged as of Player 1.3.11 / Creator 1.5.1.
+On the phone, the *Register*, *IP address* and *Send GPS to Creator* controls live in the [Settings View](../rwa-player/settings-view.md),
+and which position source is active is shown on the [Control View](../rwa-player/control-data-view.md) (the *(RTK)* tag) and by the hero marker label (*RTK / OSC / GPS*) in the [Map View](../rwa-player/map-view.md).
 
 ## How do RWA Player and Creator communicate?
 
@@ -43,7 +45,7 @@ screen.
 | --- | --- | --- | --- |
 | `/lon`, `/lat` | coordinate | ...the Hero is moved in the [Map View](../rwa-creator/map-view.md) - by dragging it, or through *Hero Follows Selection* | Moves the Hero. The Player's own game engine then decides which scenes, states and assets that position triggers. |
 | `/currentscene` | scene name | ...the simulation starts, and whenever you select a different scene while the simulation is **stopped** | Switches scene: running assets are ended, the background state of the new scene starts. |
-| `/step` | `1` | ...the connected RWA Headtracker reports a footstep, or you press :rwa-headtrackerStepButton: *Send Footstep* in the Map View toolbar | Sends a bang into Pd patches that react to footsteps (`[r $0-step]`) and counts the step (shown in the Control View) |
+| `/step` | `1` | ...the connected RWA Headtracker reports a footstep, or you press :rwa-headtrackerStepButton: *Send Step* in the Map View toolbar | Sends a bang into Pd patches that react to footsteps (`[r $0-step]`) and counts the step (shown in the Control View) |
 
 Note that the Hero position is the only *continuous* stream (while moving the Hero). Scene changes and
 footsteps are one-shot events, and everything else the Creator knows - states,

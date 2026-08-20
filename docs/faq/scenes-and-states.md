@@ -12,10 +12,10 @@ state.
 Boundaries are deliberately not razor-sharp: they have hysteresis, so that the
 edge you enter at and the edge you leave at are not the same line.
 
-* **Entering** requires you to be about 2 m *inside* the drawn
+- **Entering** requires you to be about 2 m *inside* the drawn
   boundary.[^enter-offset-shape-dependent] The trigger area is therefore
   slightly smaller than what you see on the map.
-* **Leaving** happens at the drawn boundary, unless you give the scene or state
+- **Leaving** happens at the drawn boundary, unless you give the scene or state
   an **Exit Offset** (in meters). The exit offset pushes the boundary *outwards*
   for leaving only, so you have to walk that much further out before the area
   releases you.
@@ -36,11 +36,11 @@ reliable.
 
 Two practical consequences:
 
-* **Very small areas may never trigger.** A circle needs a radius of more than 2
+- **Very small areas may never trigger.** A circle needs a radius of more than 2
   m before there is anything left to enter; a rectangle needs to be more than 2
   m wide and tall. Keep areas comfortably larger than the GPS accuracy you
   expect at that spot.
-* **Position updates are evaluated about once per
+- **Position updates are evaluated about once per
   second**,[^position-update-interval] so there can be up to a second between
   crossing a line and hearing the change. Do not design on the assumption of
   instant response - give transitions a bit of room.
@@ -115,27 +115,34 @@ you out of it:
 
 **Conditions for entering**
 
-* *Required states*: the state only opens once you have already visited the
+- *Required states*: the state only opens once you have already visited the
   states it names. If you arrive without them, you are turned away, and if a
   *hint state* is configured, you are sent there instead (a good place for a
   "you are missing something" cue). See the example and explanation to [the
   question](#how-do-i-use-required-and-hint-states) below.
-* *Enter only once* - the state can be visited once per walk and never again.
+- *Enter only once* - the state can be visited once per walk and never again.
 
 **Conditions for leaving**
 
-* *Min stay time*: scenes and states can insist on a minimum dwell time before
+- *Min stay time*: scenes and states can insist on a minimum dwell time before
   any transition is considered, even if you have already walked out.
-* *Timeout*: after this many seconds the state (or scene) is left on its own.
-* *Leave after assets finish*: the state ends by itself once its audio has
+- *Timeout*: after this many seconds the state (or scene) is left on its
+  own.[^scene-timeout-not-saved]
+- *Leave after assets finish*: the state ends by itself once its audio has
   played out.
-* *Leave only after assets finish*: walking out is not enough; the state holds
+- *Leave only after assets finish*: walking out is not enough; the state holds
   on until its audio is done. Use this when a sound must not be cut off
   mid-sentence for example.
 
+[^scene-timeout-not-saved]: A *scene's* Time Out (and Next Scene) currently
+    works in the running simulation but is **not saved to the project file**.
+    Set Time Out and Next Scene on the scene's *Background* state instead,
+    which has the same effect and is saved. This is known bug and will be
+    fixed at some point in the future.
+
 **Where you go next**
 
-* *Next state* / *next scene* send you to a specific destination when the state
+- *Next state* / *next scene* send you to a specific destination when the state
   ends. With neither set, you fall back to the scene's fallback state.
 
 ### How do I use *required* and *hint* states?
@@ -204,15 +211,15 @@ State* fields of the scene once, and check that the names match.
 
 ### Tips for reliable triggering outdoors
 
-* Draw areas larger than you think you need - GPS accuracy, not your map, sets
+- Draw areas larger than you think you need - GPS accuracy, not your map, sets
   the resolution of the piece.
-* Use the *exit offset* to widen the gap between entering and leaving wherever
+- Use the *exit offset* to widen the gap between entering and leaving wherever
   a listener is likely to linger on a boundary.
-* Avoid designing critical triggers right next to facades, under trees, or in
+- Avoid designing critical triggers right next to facades, under trees, or in
   narrow alleys; place them in open space and let the narrow spots be
   continuations, not triggers.
-* Prefer a few large, forgiving areas over many small adjacent ones. Adjacent
+- Prefer a few large, forgiving areas over many small adjacent ones. Adjacent
   areas turn every GPS wobble into a state change.
-* Walk-test with the Diagnostics tab open: it shows the live position and the
+- Walk-test with the Diagnostics tab open: it shows the live position and the
   active scene and state, which is the quickest way to see a boundary
   misbehaving.
