@@ -10,9 +10,10 @@ detail behind each entry, see [CHANGELOG.md].
 A feature release: mixing across scenes, states and assets, patches that can
 sound different on every trigger (proper random), and a large repair of undo and
 the save-on-quit behaviour (version 1.5.1 fixes a crash on undo/redo while
-running the simulation, 1.5.2 a crash in convolution filter loading.).
+running the simulation, 1.5.2 a crash in convolution filter loading. 1.5.3
+enables the reference of states from different scenes as required states).
 
-[Download v1.5.2](https://drive.switch.ch/index.php/s/yi6Eb7OSlJkYkvV/download)
+[Download v1.5.2](https://drive.switch.ch/index.php/s/QfzQWDCGXsCEkGP/download)
 
 ### Mixing: gain on scenes and states, in dB
 
