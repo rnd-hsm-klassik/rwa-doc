@@ -172,13 +172,18 @@ leave its area, visit `Key`, and come back - at which point it opens normally.
 
 **Multiple required states.**: The Required States field takes a comma-separated
 list: `Key, Crowbar, Password`. This is an *and*: every listed state must have
-been visited before the gate opens. Names must match the state names in the same
-scene exactly.[^non-matching-required] The single hint state fires no matter
+been visited before the gate opens. Names must match the state names exactly,
+and may refer to states of any scene. The memory of visited states spans the
+whole walk.[^non-matching-required] The single hint state fires no matter
 which of the required states is missing.
 
-[^non-matching-required]: Entries that don't match any state are silently dropped
-when you confirm the field, so re-select the state afterwards and check which
-names survived.
+[^non-matching-required]: Entries that don't match any state are kept (the state
+    may be created later), but the Creator warns in the Log View about names
+    that don't exist in any scene, or that exist in *several* scenes. In the
+    latter case visiting any same-named state satisfies the requirement, so keep
+    state names unique across the game when using required states. The check and
+    corresponding warning output run when you enter the name in the field and
+    once after a game is loaded.
 
 **What counts as "visited".** A state is recorded as visited the moment it is
 *entered*, the walker does not have to stay or hear the assets out. The list
@@ -204,10 +209,11 @@ rather than by walking into it.
 
 **Mind your names.** Required states and hint states are stored as plain state
 names. Renaming or deleting a state does *not* update the fields of states that
-refer to it, and nothing warns you: a gate requiring a name that no longer
-exists can never open, and a dangling hint reference simply stops the hint from
-activating. After renaming states, walk through the *Required States* and *Hint
-State* fields of the scene once, and check that the names match.
+refer to it: a gate requiring a name that no longer exists can never open, and a
+dangling hint reference stops the hint from activating. Dangling
+*required*-state names are reported in the Log View when a game is loaded; hint
+references are not, so after renaming states, walk through the *Hint State*
+fields of the scene once and check that the names match.
 
 ### Tips for reliable triggering outdoors
 
