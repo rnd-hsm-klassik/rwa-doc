@@ -13,7 +13,7 @@ the save-on-quit behaviour (version 1.5.1 fixes a crash on undo/redo while
 running the simulation, 1.5.2 a crash in convolution filter loading. 1.5.3
 enables the reference of states from different scenes as required states).
 
-[Download v1.5.3](https://drive.switch.ch/index.php/s/QfzQWDCGXsCEkGP/download)
+[Download v1.5.3](https://drive.switch.ch/index.php/s/QfzQWDCGXsCEkGP/?accept=zip)
 
 ### Mixing: gain on scenes and states, in dB
 
