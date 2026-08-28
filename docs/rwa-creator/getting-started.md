@@ -2,7 +2,7 @@
 
 ## Installation
 
-Download the [latest version](https://drive.switch.ch/index.php/s/QfzQWDCGXsCEkGP/?accept=zip) of RWA Creator (v1.5.3, 2026-08-27, [Release Notes]). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
+Download the [latest version](https://drive.switch.ch/index.php/s/fkRXSc95qJQmrSG/?accept=zip) of RWA Creator (v1.5.4, 2026-08-28, [Release Notes]). At the moment, RWA Creator is only available for macOS. Linux and Windows versions will be available in the future.
 
 [Release Notes]: release-notes.md
 
@@ -47,3 +47,48 @@ A new project already contains one scene with its *Background* and *Fallback* st
     but only *Save* writes the project file itself.
 
 When the walk is ready for the phone, see [Transferring Projects](../creating-soundwalks/transferring-projects.md).
+
+## Menus and Preferences
+
+### File
+
+| Menu entry                                 | Shortcut             | What it does                                                                                                                                                                                                            |
+| ------------------------------------------ | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| New                                        | ++command+n++        | Start a new project (asks to save if the current one has unsaved changes).                                                                                                                                              |
+| Open                                       | ++command+o++        | Open an `.rwa` project file. Double-clicking an `.rwa` file in the Finder does the same.                                                                                                                                |
+| Save                                       | ++command+s++        | Write the current `.rwa` file in place.                                                                                                                                                                                 |
+| Save Version as…                           | ++command+shift+s++  | Write a **new** `.rwa` file, by default next to the current one in the same project folder, and continue working on that version. Useful for keeping milestones of a walk; all versions share the same `assets` folder. |
+| Copy Project to…                           | ++command+option+s++ | Duplicate the whole project (project file, `assets`, and the internal folders) to a new location.                                                                                                                       |
+| Export Project for transfer to RWA Player… | ++command+e++        | Write a clean copy (`.rwa` + `assets` only) to the *Project Export Path*, ready to be copied onto an iPhone by USB. See [Transferring Projects](../creating-soundwalks/transferring-projects.md).                       |
+| Send Project to Sharing Server…            | ++command+shift+e++  | Zip the project into the *Sharing Server Path*, from where RWA Player downloads it over WiFi.                                                                                                                           |
+| Remove unused files from disk              |                      | Delete every file in the `assets` folder that no asset of the project refers to any more (immediately, not into the trash - check the [Log View](./log-view.md) for what was removed).                                  |
+| File Path Preferences                      |                      | See below.                                                                                                                                                                                                              |
+
+**File Path Preferences** holds two folders:
+
+- *Sharing Server Path* - where *Send Project to Sharing Server…* puts the zip files, and what the
+  :rwa-syncwithclients: Sharing Server serves. Default: `~/Library/Application Support/RWACreator/Games`.
+- *Project Export Path* - where *Export Project for transfer to RWA Player…* writes to. Default: `~/Desktop`.
+
+### Audio Preferences
+
+- **Rescan Audio Devices**: pick up headphones or interfaces plugged in after the app started (this also happens automatically whenever you start the simulation).
+- **Target Sample Rate**: 44100 or **48000** (default). RWA Creator and RWA Player both run at 48 kHz,
+  so work at 48 kHz throughout: record, edit and export your files at 48 kHz.
+  A file at another rate is played back pitch-shifted and gets a :rwa-badgeSamplerateMismatch: badge in the asset list.
+- **Select Output-Device / Select Input-Device**: *Follow System Default* (recommended: RWA Creator follows whatever macOS switches to) or a fixed device, remembered by name across restarts.
+  The input device only matters for Pd patches using live microphone input (`[adc~]`).
+
+### Simulation
+
+*Run Simulation* ++command+r++ and *Stop Simulation* ++command+k++, the same as the :rwa-start: / :rwa-stop: buttons in the Map View toolbar.
+
+### Headtracker
+
+Connect an RWA headtracker over Bluetooth to steer the Hero's head orientation: see [Map View > Headtracker](./map-view.md#headtracker).
+
+### View
+
+*Gather Views* docks all views back into the main window;
+the other entries open or raise the individual views (Map, Game, Scene, State, History, Log Window).
+*Clear Log Window* (++command+shift+l++) empties the log.

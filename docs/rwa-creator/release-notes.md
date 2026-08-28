@@ -5,15 +5,30 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
+## Version 1.5.4 (19 August 2026)
+
+[Download v1.5.4](https://drive.switch.ch/index.php/s/fkRXSc95qJQmrSG/?accept=zip)
+
+Switch heading data to a binary transmission format for better performance / lower latency.
+This change will reduce the lag you percieve when you turn your head in a scene.
+
+## Version 1.5.3
+
+Enable the reference of states from different scenes as required states.
+
+## Version 1.5.2
+
+Fix a crash in convolution filter loading.
+
+## Version 1.5.1
+
+Fix a crash on undo/redo while running the simulation.
+
 ## Version 1.5.0 (19 August 2026)
 
 A feature release: mixing across scenes, states and assets, patches that can
 sound different on every trigger (proper random), and a large repair of undo and
-the save-on-quit behaviour (version 1.5.1 fixes a crash on undo/redo while
-running the simulation, 1.5.2 a crash in convolution filter loading. 1.5.3
-enables the reference of states from different scenes as required states).
-
-[Download v1.5.3](https://drive.switch.ch/index.php/s/QfzQWDCGXsCEkGP/?accept=zip)
+the save-on-quit behaviour.
 
 ### Mixing: gain on scenes and states, in dB
 
