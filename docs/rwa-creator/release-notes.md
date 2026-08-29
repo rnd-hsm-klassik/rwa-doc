@@ -5,22 +5,26 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
-## Version 1.5.4 (19 August 2026)
+## Version 1.5.4 (29 August 2026)
 
-[Download v1.5.4](https://drive.switch.ch/index.php/s/fkRXSc95qJQmrSG/?accept=zip)
+[Download v1.5.5](https://drive.switch.ch/public.php/dav/files/2sEaHJx3GiJqYzS/?accept=zip)
+
+Bugfixes: Crash when selecting a state after adding a second Map View; crash when clicking the map after deleting or clearing a scene; correctly delete scenes when removing them.
+
+## Version 1.5.4 (28 August 2026)
 
 Switch heading data to a binary transmission format for better performance / lower latency.
 This change will reduce the lag you percieve when you turn your head in a scene.
 
-## Version 1.5.3
+## Version 1.5.3 (27 August 2026)
 
 Enable the reference of states from different scenes as required states.
 
-## Version 1.5.2
+## Version 1.5.2 (20 August 2026)
 
 Fix a crash in convolution filter loading.
 
-## Version 1.5.1
+## Version 1.5.1 (19 August 2026)
 
 Fix a crash on undo/redo while running the simulation.
 
