@@ -5,9 +5,17 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
-## Version 1.5.4 (29 August 2026)
+## Version 1.5.6 (2 September 2026)
 
-[Download v1.5.5](https://drive.switch.ch/public.php/dav/files/2sEaHJx3GiJqYzS/?accept=zip)
+[Download v1.5.6](https://drive.switch.ch/public.php/dav/files/C6LdHWHqGr8szt4/?accept=zip)
+
+- Updated to **libpd 0.16.1**, which implements **Pd 0.56-5**. This is a first step
+  towards more flexible and simpler Pd patches, as this new version of pure data
+  offers many new features, among them `[clone]` and multichannel signals.
+- Fixed a bug causing "Send Project to Sharing Server" to create corrupt zip
+  archives of projects.
+
+## Version 1.5.5 (29 August 2026)
 
 Bugfixes: Crash when selecting a state after adding a second Map View; crash when clicking the map after deleting or clearing a scene; correctly delete scenes when removing them.
 
