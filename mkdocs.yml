@@ -107,6 +107,7 @@ nav:
       - State View: rwa-creator/state-view.md
       - History View: rwa-creator/history-view.md
       - Log View: rwa-creator/log-view.md
+      - Headtracker View: rwa-creator/headtracker-view.md
   - RWA Player:
     - rwa-player/index.md
     - Getting Started: rwa-player/getting-started.md

@@ -17,5 +17,6 @@ This manual provides a comprehensive guide to using the RWA Creator application,
 - [State View](./state-view.md)
 - [History View](./history-view.md)
 - [Log View](./log-view.md)
+- [Headtracker View](./headtracker-view.md): Shows what the connected tracker delivers.
 
 To get your project onto the iPhone running *RWA Player*, see [Transferring Projects](../creating-soundwalks/transferring-projects.md) in the *Creating Soundwalks* section.

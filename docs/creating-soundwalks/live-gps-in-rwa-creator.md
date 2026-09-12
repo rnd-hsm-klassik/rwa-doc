@@ -5,7 +5,7 @@ How far are the surrounding trees, buildings and landmarks? What influence do th
 sound actually sound *at* a specific location? It helps a great deal to grab your laptop, headphones and iPhone,
 and sit in the very place you are designing sounds for.
 
-To get the best simulation result on location, transmit the iPhone's GPS position to *RWA Creator* and listen to
+To get the best simulation result on location, transmit the head-trackers GPS position to *RWA Creator* and listen to
 the result in realtime - without having to transfer the project to the phone after every change. You also see
 the actual GPS precision live on the map, so you can adjust the boundaries of scenes and states on the spot.
 Ideal for field work.
@@ -13,7 +13,32 @@ Ideal for field work.
 The opposite direction - steering the phone from the laptop - is covered in
 [Simulating Location on the Phone](./simulating-location-on-the-phone.md).
 
-## Requirements
+The most accurate method is using an RTK head-tracker, but you need caster credentials.
+You may also use an iPhone's GPS, when running *RWA Player*, see below.
+
+## Using an RTK headtracker
+
+You need:
+
+- RTK headtracker
+- Caster credentials
+- Internet connection (for NTRIP correction data)
+
+If you have an RTK headtracker connected to RWA Creator, you can receive head-tracking and position data while listening to the simulation on headphones:
+enable *Headtracker > Hero Follows RTK Position* and the Hero follows the headtracker's own GPS fix, with or without the simulation running.
+With *NTRIP Corrections* enabled and the caster configured, that fix can become centimetre-accurate.
+
+See [RTK headtracker Menu](../rwa-creator/getting-started.md#headtracker) and the [Headtracker View](../rwa-creator/headtracker-view.md).
+
+Once connected you walk around wearimg the headphones, the laptop in your hands, and hear your design react to
+your real position, and edit it in place:
+
+- Listen to how a source sits against the real acoustic backdrop of the place, and adjust its sound design directly.
+- Walk the edges of your scenes and states, and drag boundaries and radii until the transitions happen where they feel right.
+- Watch how the Hero position scatters while you stand still - that scatter *is* the GPS accuracy at this
+  location (significantly stronger without RTK), and your state boundaries should account for it.
+
+## Using *RWA Player* and the iPhone's GPS
 
 - The iPhone (running *RWA Player*) and the laptop (running *RWA Creator*) are in the **same WiFi network**.
   The personal hotspot of your iPhone works well for this.
@@ -23,19 +48,7 @@ The opposite direction - steering the phone from the laptop - is covered in
     On macOS, open *System Settings > WiFi*, and click *Details...* on the connected network to see the
     laptop's IP address. Alternatively, run `ipconfig getifaddr en0` in a terminal.
 
-## Steps
-
 1. On the iPhone, open the *Settings* pane of *RWA Player* and enter the **IP address** of your laptop.
 2. Toggle **GPS to RWA Creator**. The phone now transmits its GPS position to the laptop.
 3. In *RWA Creator*, start the simulation with the :rwa-start: button in the
    [Map View](../rwa-creator/map-view.md) toolbar. The Hero now follows the phone's location.
-
-You can now walk around with the phone in your pocket and the laptop in your hands, hear your design react to
-your real position, and edit it in place:
-
-- Listen to how a source sits against the real acoustic backdrop of the place, and adjust its sound design
-  directly.
-- Walk the edges of your scenes and states, and drag boundaries and radii until the transitions happen where
-  they feel right.
-- Watch how the Hero position scatters while you stand still - that scatter *is* the GPS accuracy at this
-  location, and your state boundaries should account for it.

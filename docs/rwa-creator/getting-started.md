@@ -87,8 +87,31 @@ When the walk is ready for the phone, see [Transferring Projects](../creating-so
 
 Connect an RWA headtracker over Bluetooth to steer the Hero's head orientation: see [Map View > Headtracker](./map-view.md#headtracker).
 
+- **Headtracker Name (name)**: set the name of the headtrackers you want to connect to (usually printed onto the assembly).
+- **Connect via Bluetooth**: Try to establish the connection to the headtracker.
+- **Disconnect from Bluetooth**: Disconnect from the headtracker. This is important if you want to pair the headtracker with RWA Player on a phone!
+
+With an RTK headtracker, the same menu configures the correction service (*NTRIP Caster...*, *NTRIP Corrections*)
+and can let the Hero follow the headtracker's position (*Hero Follows RTK Position*): see
+[RTK headtracker](./headtracker-view.md).
+
+- **NTRIP Caster...**: the correction service the receiver needs for centimetre accuracy: host, port, mount point,
+  and the **username and password of this headtracker**. Every headtracker has its own caster account, and an
+  account allows one session at a time: while RWA Creator holds it, the RWA Player using the same headtracker
+  gets no corrections, and vice versa. Make sure to use your credentials only once at a time.
+
+- **NTRIP Corrections**: when enabled, RWA Creator opens the caster session as soon as a headtracker with
+  firmware 0.48.0 or newer is connected, and closes it when the headtracker disconnects. Corrections go to
+  the headtracker over the Bluetooth link; without them the receiver still delivers a plain GNSS position.
+  The [Headtracker View](./headtracker-view.md) shows the session state and any error.
+
+- **Hero Follows RTK Position**: moves the Hero to every position fix of the headtracker, whether or not the
+  simulation runs. Dragging the Hero by hand is pointless while this is on. Together with a
+  [live GPS](../creating-soundwalks/live-gps-in-rwa-creator.md) workflow this lets you walk the site with the
+  headphones on and hear the design at the real, centimetre-accurate position.
+
 ### View
 
 *Gather Views* docks all views back into the main window;
-the other entries open or raise the individual views (Map, Game, Scene, State, History, Log Window).
+the other entries open or raise the individual views (Map, Game, Scene, State, History, Log Window, Headtracker).
 *Clear Log Window* (++command+shift+l++) empties the log.
