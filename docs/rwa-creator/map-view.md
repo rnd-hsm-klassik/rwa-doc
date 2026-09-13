@@ -153,19 +153,3 @@ For balancing the soundwalk itself, use the gains described in [Mixing Soundwalk
 :rwa-audiosourcestartpoint: Starting point of moving asset
 
 :rwa-audiosourcestartpoint1: Moving asset position
-
-## Headtracker
-
-The *Headtracker* menu in the menu bar connects RWA Creator to an RWA headtracker over Bluetooth LE, so the
-simulation reacts to where you turn your head - sources stay put in the world while you look around.
-
-- **Headtracker Name (…)**: enter the Bluetooth name printed on the headphones (for example `rwaht31` or
-  `rtkrover-ca0ca7`). The name has to match exactly; there is no device picker.
-- **Connect via Bluetooth**: scans for about 15 seconds and connects to the device with that name. The
-  [Log View](./log-view.md) lists every BLE device found, so you can check the name if the connection fails.
-  On first use macOS asks for Bluetooth permission.
-- **Disconnect from Bluetooth**.
-
-Once connected, the tracker's azimuth and elevation replace the Hero's head orientation, and its step detector
-feeds the *step* events. [Calibrate](#calibrate-headtracker) to set north. Without a headtracker the Hero
-always faces north: an asset north of the Hero is heard in front, east to the right, south behind.
