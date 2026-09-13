@@ -38,6 +38,11 @@ your real position, and edit it in place:
 - Watch how the Hero position scatters while you stand still - that scatter *is* the GPS accuracy at this
   location (significantly stronger without RTK), and your state boundaries should account for it.
 
+!!! tip "Recording a location while walking"
+    While walking with the RTK headtracker, press :rwa-recordLandmarkButton: *Record Landmark* in the Map View
+    toolbar whenever you stand at a place worth remembering: RWA Creator stores it as a
+    [landmark](../rwa-creator/map-view.md#landmarks) you can later place sounds on.
+
 ## Using *RWA Player* and the iPhone's GPS
 
 - The iPhone (running *RWA Player*) and the laptop (running *RWA Creator*) are in the **same WiFi network**.

@@ -34,11 +34,13 @@ With the *Arrow* tool, the area of the **selected** scene or state can be edited
     Assets are moved and edited in the [State View](./state-view.md) only;
     clicking them on the map has no effect.
 
-### Show assets/radii
+### Toggle RWA map features
 
 :rwa-audiosource: **Blue speaker**: toggle display of assets in *Map View*
 
 :rwa-radiiVisibleButton: **State circle**: toggle display of state radii in *Map View*
+
+:rwa-landmark: **Landmark flag**: toggle display of [landmarks](#landmarks)
 
 ### Start/Stop Simulation
 
@@ -61,6 +63,10 @@ Without calibration, the tracker's own idea of north is used (indoors a bit inac
 Simulates one footstep: the same event the headtracker's step detector produces when you walk.
 Pd patch assets that listen to `[r $0-step]` receive a bang, and the step is forwarded as `/step` to every registered RWA Player (see [Technical Details](../faq/technical-details.md)).
 Useful for testing footstep-driven patches without walking.
+
+### :rwa-recordLandmarkButton: Record Landmark
+
+Records a [landmark](#landmarks) at the Hero's current position and opens the dialog for its name and description.
 
 ### ![hero4](./assets/heroFollowsSceneAndStateButton.png) Hero Follows Selection
 <!-- TODO: this is missing an SVG Icon -->
@@ -153,3 +159,34 @@ For balancing the soundwalk itself, use the gains described in [Mixing Soundwalk
 :rwa-audiosourcestartpoint: Starting point of moving asset
 
 :rwa-audiosourcestartpoint1: Moving asset position
+
+:rwa-landmark: Landmark
+
+## Landmarks
+
+A landmark is a named place on the map that describe a specific location: a lamppost, a bench, the corner of a
+building, the spot where a sound should sit. Landmarks are saved with the project, but not exported to the RWA
+Player.
+
+**Recording.** Put the Hero where the landmark belongs and press :rwa-recordLandmarkButton: *Record Landmark*.
+With an RTK headtracker connected and *Headtracker > Hero Follows RTK Position* on, the Hero is wherever you
+stand (or wherever you hold the headtracker, on the object itself if you like), so the landmark gets the
+receiver's centimetre-accurate position. Without one, drag the Hero to the place first. The dialog asks for a
+name and a description and shows how the position was captured: *RTK fixed* with an accuracy of a few
+centimetres is the best case, *hero placed by hand* means the position is only as good as your drag.
+
+**On the map.** Each landmark is a :rwa-landmark: flag with its name; the bottom of the flag pole marks the exact position.
+Click a flag to select it, drag it to move it, double-click it to edit name and description.
+++delete++ removes the selected landmark.
+
+**Right-click menu.** A right-click on a flag offers:
+
+- **Move Hero here**: puts the Hero on the landmark, handy for testing a state without dragging the Hero across
+  the map. Not available while *Hero Follows RTK Position* is on, because the next fix would move the Hero back.
+- **Move "..." here**: moves the currently selected asset (the one last clicked in the State View or its list) to
+  the landmark. Its channel and reflection positions move along, as when you drag the asset. This is the
+  workflow for placing a sound exactly on a real object: record the object, then move the asset onto it.
+- **Edit...** and **Delete**.
+
+Landmarks that are hidden with :rwa-landmark: *Show Landmarks* cannot be clicked;
+recording a new one turns them back on.
