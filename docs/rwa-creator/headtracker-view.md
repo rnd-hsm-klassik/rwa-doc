@@ -2,7 +2,9 @@
 
 Live numbers of the headtracker connected to RWA Creator, refreshed once a second.
 Open it with *View > Headtracker View* (it starts hidden; *Gather Views* shows it too).
-The controls it reports on live in the [Headtracker menu](./map-view.md#headtracker).
+The controls it reports on live in the [Headtracker menu](./getting-started.md#headtracker).
+
+Check out [Using a Headtracker](../creating-soundwalks/using-a-headtracker.md) and [Live GPS in RWA Creator](../creating-soundwalks/live-gps-in-rwa-creator.md) for more details.
 
 ![history-view](./assets/rwa-creator-headtracker-view.png)
 

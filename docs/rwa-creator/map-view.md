@@ -53,9 +53,9 @@ if you were walking. Deleting scenes, states or assets is refused while the simu
 
 ### :rwa-calibrateHeadtrackerButton: Calibrate Headtracker
 
-With a [headtracker](#headtracker) connected, point the headphones in the direction that should be *north* and press the button:
+With a [headtracker](../creating-soundwalks/using-a-headtracker.md) connected, point the headphones in the direction that should be *north* and press the button:
 RWA Creator averages the next few orientation readings and uses them as the north / zero offset from now on.
-While it collects (a fraction of a second), no orientation data is forwarded; the [Log View](./log-view.md) reports *Done Calibrating*.
+The [Log View](./log-view.md) reports *Done Calibrating*.
 Without calibration, the tracker's own idea of north is used (indoors a bit inaccurate at times, usually off by a constant angle).
 
 ### :rwa-headtrackerStepButton: Send Step

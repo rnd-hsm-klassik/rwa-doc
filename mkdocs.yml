@@ -121,6 +121,7 @@ nav:
     - creating-soundwalks/index.md
     - Transferring Projects: creating-soundwalks/transferring-projects.md
     - Location Data & Field Work:
+      - Using a Headtracker: creating-soundwalks/using-a-headtracker.md
       - Simulating Location on the Phone: creating-soundwalks/simulating-location-on-the-phone.md
       - Live GPS in RWA Creator: creating-soundwalks/live-gps-in-rwa-creator.md
     - Postproduction:

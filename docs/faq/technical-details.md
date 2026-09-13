@@ -37,7 +37,6 @@ screen.
 | `/position` | longitude, latitude | Every GPS update, while **Send GPS to Creator** is on *and* the phone is not registered. See [Live GPS in RWA Creator]. |
 
 [Settings View]: ../rwa-player/settings-view.md
-[Live GPS in RWA Creator]: ../creating-soundwalks/live-gps-in-rwa-creator.md
 
 ### What RWA Creator sends to the Player (:8001)
 

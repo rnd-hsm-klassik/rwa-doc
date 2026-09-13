@@ -85,15 +85,17 @@ When the walk is ready for the phone, see [Transferring Projects](../creating-so
 
 ### Headtracker
 
-Connect an RWA headtracker over Bluetooth to steer the Hero's head orientation: see [Map View > Headtracker](./map-view.md#headtracker).
+Connect an RWA headtracker over Bluetooth to steer the Hero's head orientation: see [Creating Soundwalks > Using a Headtracker].
 
-- **Headtracker Name (name)**: set the name of the headtrackers you want to connect to (usually printed onto the assembly).
-- **Connect via Bluetooth**: Try to establish the connection to the headtracker.
+- **Headtracker Name (name)**: set the name of the headtracker you want to connect to (usually printed onto the assembly, for example `rwa-hs-1` or `rwaht31`).
+
+- **Connect via Bluetooth**: scans for about 15 seconds and connects to the device with that name. The
+  [Log View](./log-view.md) lists every BLE device found, so you can check the name if the connection fails.
+
 - **Disconnect from Bluetooth**: Disconnect from the headtracker. This is important if you want to pair the headtracker with RWA Player on a phone!
 
 With an RTK headtracker, the same menu configures the correction service (*NTRIP Caster...*, *NTRIP Corrections*)
-and can let the Hero follow the headtracker's position (*Hero Follows RTK Position*): see
-[RTK headtracker](./headtracker-view.md).
+and can let the Hero follow the headtracker's position (*Hero Follows RTK Position*): see [Headtracker View](./headtracker-view.md).
 
 - **NTRIP Caster...**: the correction service the receiver needs for centimetre accuracy: host, port, mount point,
   and the **username and password of this headtracker**. Every headtracker has its own caster account, and an
@@ -107,8 +109,11 @@ and can let the Hero follow the headtracker's position (*Hero Follows RTK Positi
 
 - **Hero Follows RTK Position**: moves the Hero to every position fix of the headtracker, whether or not the
   simulation runs. Dragging the Hero by hand is pointless while this is on. Together with a
-  [live GPS](../creating-soundwalks/live-gps-in-rwa-creator.md) workflow this lets you walk the site with the
+  [live GPS] workflow this lets you walk the site with the
   headphones on and hear the design at the real, centimetre-accurate position.
+
+[Creating Soundwalks > Using a Headtracker]: ../creating-soundwalks/using-a-headtracker.md
+[live GPS]: ../creating-soundwalks/live-gps-in-rwa-creator.md
 
 ### View
 
