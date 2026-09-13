@@ -48,8 +48,10 @@ With the *Arrow* tool, the area of the **selected** scene or state can be edited
 
 :rwa-stop: **Red stop button**: stops simulation, ++command+k++
 
-While the simulation runs, the Hero can be dragged across the map, and states and scenes are activated and deactivated as
-if you were walking. Deleting scenes, states or assets is refused while the simulation runs.
+While the simulation runs, the Hero can be dragged across the map, and states and scenes are activated and deactivated as if you were walking.
+Assets can be moved as well: drag an asset, one of its channels or its start point in the [State View](./state-view.md),
+or use a landmark's *Move "`<asset>`" here*, and the sound follows at once, so distances and the influence of damping can be tuned by ear.
+Deleting scenes, states or assets is refused while the simulation runs, and the areas of states and scenes are edited only while it is stopped.
 
 ### :rwa-calibrateHeadtrackerButton: Calibrate Headtracker
 

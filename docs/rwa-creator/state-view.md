@@ -17,6 +17,9 @@ rename before dropping if you mean a different file.
 After adding an asset, it appears in the *Asset Map View*, where it can be placed with the mouse,
 inside or outside the state's area. The area only decides *when* the state's assets play.
 The asset position decides *from where* they are heard.
+This also works while the simulation runs: drag the asset (or a channel, the start point, a reflection)
+and you hear it from its new position right away, a quick way to tune distances and damping by ear.
+The state's area itself is edited only while the simulation is stopped.
 Clicking on an asset either in the list or the map selects the corresponding asset;
 its attributes are shown in the *Asset Attributes* list and can be edited there.
 Several assets can be selected by holding down the ++command++ or ++shift++ keys and clicking on the assets in the list,
