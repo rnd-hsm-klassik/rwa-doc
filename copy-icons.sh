@@ -22,7 +22,7 @@ declare -a FILES=(
     "headphones_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:calibrateHeadtrackerButton.svg"
     "delete_forever_48dp_434343_FILL0_wght300_GRAD-25_opsz48.svg:donttrashassets.svg"
     "not_listed_location_48dp_434343_FILL0_wght300_GRAD-25_opsz48.svg:findlocation.svg"
-    "flag_48dp_2854C5_FILL1_wght300_GRAD-25_opsz48.svg:flag.svg"
+    "flag_48dp_2854C5_FILL1_wght300_GRAD-25_opsz48.svg:landmark.svg"
     "flag_add_48dp_434343_FILL0_wght300_GRAD-25_opsz48-custom.svg:recordLandmarkButton.svg"
     "podiatry_48dp_434343_FILL1_wght300_GRAD-25_opsz48.svg:headtrackerStepButton.svg"
     "select_48dp_434343_FILL0_wght300_GRAD-25_opsz48.svg:pen.svg"
