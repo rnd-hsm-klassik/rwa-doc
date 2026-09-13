@@ -152,15 +152,15 @@ For balancing the soundwalk itself, use the gains described in [Mixing Soundwalk
 
 :rwa-stateselected: Center of selected state
 
-:rwa-audiosource: Asset (also center of rotation)
+:rwa-audiosource: Asset: where it sounds.
 
 :rwa-audiosourceselected: Selected asset
 
-:rwa-audiochannelsource: Channel source if asset has more than one channel
+:rwa-audiochannelsource: Channel source if asset has more than one channel (around the asset, or around the star of a rotating asset)
 
-:rwa-audiosourcestartpoint: Starting point of moving asset
+:rwa-movingAssetAnchor: Anchor of a moving or rotating asset: the target of a moving asset, the center of rotation of a rotating one.
 
-:rwa-audiosourcestartpoint1: Moving asset position
+:rwa-movingAssetStart: Start of a moving asset. A dotted line joins start and target.
 
 :rwa-landmark: Landmark
 
