@@ -5,9 +5,31 @@ detail behind each entry, see [CHANGELOG.md].
 
 [CHANGELOG.md]: https://github.com/rnd-hsm-klassik/rwa-creator/blob/h.e.i.-campus-customisation/CHANGELOG.md
 
-## Version 1.5.6 (2 September 2026)
+## Version 1.6.4 (14 September 2026)
 
-[Download v1.5.6](https://drive.switch.ch/public.php/dav/files/C6LdHWHqGr8szt4/?accept=zip)
+[Download v1.6.4](https://drive.switch.ch/public.php/dav/files/LecDsLsPzyre2z6/?accept=zip)
+
+- Update to moving assets: correctly assign icon to start, traveling and target position,
+  and draw a dotted trajectory line inbetween.
+- Fix a bug that hides some of the icons in the map views.
+
+## Version 1.6.3 (13 September 2026)
+
+Move assets while simulation is running.
+
+## Version 1.6.2 (13 September 2026)
+
+Landmarks.
+
+## Version 1.6.1 (12 September 2026)
+
+Receive precision GPS position from RTK headtracker directly in RWA Creator.
+
+## Version 1.6.0 (4 September 2026)
+
+Decimal precision for distances and angles! Some bug fixes with channel positioning in multi-channel assets, as well as elevation bugs.
+
+## Version 1.5.6 (2 September 2026)
 
 - Updated to **libpd 0.16.1**, which implements **Pd 0.56-5**. This is a first step
   towards more flexible and simpler Pd patches, as this new version of pure data
